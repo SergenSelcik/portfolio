@@ -1,0 +1,56 @@
+@import '../../../styles.scss';
+
+.bg_style {
+    background-color: #FFFCF3;
+}
+
+.max_width {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+p {
+    @include fontStyle($ff: 'Syne', $fs: 24px, $fw: 600, $lh: 24px, $c: #000000);
+}
+
+.header {
+    position: relative;
+    height: 120px;
+    @include dFlex($jc: space-between, $ai: center);
+
+    >img {
+        height: 38px;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    height: 80px !important;
+    margin-top: 35px;
+}
+
+.burger_menu {
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+    opacity: 1;
+    height: 50px;
+}
+
+.burger_menu.stage-1,
+.burger_menu.stage-2,
+.burger_menu.stage-4 {
+    opacity: 0;
+}
+
+.burger_menu.active.stage-1,
+.burger_menu.active.stage-2,
+.burger_menu.active.stage-4 {
+    opacity: 1;
+}
+
+.burger_menu.stage-3 {
+    opacity: 0;
+}
+
+.burger_menu.active.stage-3 {
+    opacity: 1;
+}

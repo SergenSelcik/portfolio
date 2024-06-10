@@ -1,0 +1,174 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+    height: 100vh;
+}
+
+.bg_style {
+    background-color: #FFFCF3;
+    height: 100%;
+}
+
+.max_width {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.h1_container {
+    cursor: pointer;
+    @include position($pos: absolute, $top: 400px, $left: 50%, $bottom: auto, $right: auto);
+    @include size($w: 750px, $h: 591px);
+    @include dFlex($jc: center, $ai: center);
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    gap: 35px;
+    animation: fadeIn 250ms ease-in-out forwards;
+    z-index: 10;
+
+    h1 {
+        @include fontStyle($ff: 'Syne', $fs: 120px, $fw: 700, $lh: 120px, $c: #000000);
+        letter-spacing: -2.5px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.box_size {
+    @include size($w: 750px, $h: 250px);
+    @include dFlex($jc: center, $ai: center);
+    position: relative;
+
+    .nav_line_0 {
+        @include position($pos: absolute, $top: auto, $left: 0, $bottom: 0, $right: auto);
+        height: 60px;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
+
+    .nav_line_1 {
+        @include position($pos: absolute, $top: auto, $left: 0, $bottom: 0, $right: auto);
+        display: none;
+        height: 210px;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    .nav_line_2 {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+        height: 210px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    &:hover .nav_line_0 {
+        opacity: 0;
+    }
+
+    &:hover .nav_line_1 {
+        display: block;
+        opacity: 1;
+        width: 100%;
+        animation: drawLine1 125ms linear forwards;
+    }
+
+    &:hover .nav_line_2 {
+        opacity: 1;
+    }
+
+    @keyframes drawLine1 {
+        0% {
+            width: 100%;
+            left: 0px;
+        }
+
+        100% {
+            width: 30%;
+            left: 70%;
+        }
+    }
+}
+
+.nav_bottom_container {
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+    @include size($w: 100%, $h: 330px);
+
+    img {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+        @include size($w: 100%, $h: 100%);
+        opacity: 0;
+        animation: fadeInUp 0.1s ease forwards;
+        z-index: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+
+    to {
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.nav_footer_container {
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+    @include dFlex($jc: center, $ai: start);
+    @include size($w: 100%, $h: 240px);
+    flex-direction: column;
+    z-index: 2;
+    gap: 10px;
+
+    .nav_footer_text {
+        @include size($w: 425px, $h: 80px);
+        position: relative;
+
+        >span {
+            @include position($pos: relative, $top: auto, $left: 0, $bottom: 0, $right: auto);
+            @include fontStyle($ff: 'Syne', $fs: 78px, $fw: 800, $lh: 78px, $c: #FFFCF3);
+            transition: all 125ms ease;
+            cursor: pointer;
+
+            &:hover {
+                color: #FF9900;
+            }
+        }
+    }
+}
+
+.mail_n_icons_container {
+    @include dFlex($jc: space-between, $ai: center);
+    @include size($w: 100%, $h: 40px);
+    position: relative;
+
+    >span {
+        @include position($pos: absolute, $top: auto, $left: 0, $bottom: 0, $right: auto);
+        @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #FFFCF3);
+        @include dFlex($ai: center);
+        height: 40px;
+        cursor: default;
+    }
+}
+
+.icons {
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 15px, $right: 40px);
+    @include dFlex($jc: space-between, $ai: center);
+    width: 204px;
+
+    img {
+        width: 30px;
+        cursor: pointer;
+    }
+}

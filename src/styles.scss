@@ -1,1 +1,218 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin dFlex($jc: center, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin fontStyle($ff: 'Syne', $fs: 16px, $fw: 400, $lh: 24px, $c: #000000) {
+    font-family: $ff;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $c;
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin position($pos, $top, $left, $bottom, $right) {
+    position: $pos;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+}
+
+/* syne-400 - regular */
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/fonts/Syne/Syne-Regular.ttf);
+}
+
+/* syne-500 - medium */
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./assets/fonts/Syne/Syne-Medium.ttf);
+}
+
+/* syne-600 - semi-bold */
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./assets/fonts/Syne/Syne-SemiBold.ttf);
+}
+
+/* syne-700 - bold */
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./assets/fonts/Syne/Syne-Bold.ttf);
+}
+
+/* syne-800 - extra-bold */
+@font-face {
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    src: url(./assets/fonts/Syne/Syne-ExtraBold.ttf);
+}
+
+/* overpass-100 - thin */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 100;
+    src: url(./assets/fonts/Overpass/Overpass-Thin.ttf);
+}
+
+/* overpass-100 - thin-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 100;
+    src: url(./assets/fonts/Overpass/Overpass-ThinItalic.ttf);
+}
+
+/* overpass-200 - extra-light */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 200;
+    src: url(./assets/fonts/Overpass/Overpass-ExtraLight.ttf);
+}
+
+/* overpass-200 - extra-light-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 200;
+    src: url(./assets/fonts/Overpass/Overpass-ExtraLightItalic.ttf);
+}
+
+/* overpass-300 - light */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 300;
+    src: url(./assets/fonts/Overpass/Overpass-Light.ttf);
+}
+
+/* overpass-300 - light-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 300;
+    src: url(./assets/fonts/Overpass/Overpass-LightItalic.ttf);
+}
+
+/* overpass-400 - regular */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/fonts/Overpass/Overpass-Regular.ttf);
+}
+
+/* overpass-400 - italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 400;
+    src: url(./assets/fonts/Overpass/Overpass-Italic.ttf);
+}
+
+/* overpass-500 - medium */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./assets/fonts/Overpass/Overpass-Medium.ttf);
+}
+
+/* overpass-500 - medium-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 500;
+    src: url(./assets/fonts/Overpass/Overpass-MediumItalic.ttf);
+}
+
+/* overpass-600 - semi-bold */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./assets/fonts/Overpass/Overpass-SemiBold.ttf);
+}
+
+/* overpass-600 - semi-bold-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 600;
+    src: url(./assets/fonts/Overpass/Overpass-SemiBoldItalic.ttf);
+}
+
+/* overpass-700 - bold */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    src: url(./assets/fonts/Overpass/Overpass-Bold.ttf);
+}
+
+/* overpass-700 - bold-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 700;
+    src: url(./assets/fonts/Overpass/Overpass-BoldItalic.ttf);
+}
+
+/* overpass-800 - extra-bold */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 800;
+    src: url(./assets/fonts/Overpass/Overpass-ExtraBold.ttf);
+}
+
+/* overpass-800 - extra-bold-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 800;
+    src: url(./assets/fonts/Overpass/Overpass-ExtraBoldItalic.ttf);
+}
+
+/* overpass-900 - black */
+@font-face {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 900;
+    src: url(./assets/fonts/Overpass/Overpass-Black.ttf);
+}
+
+/* overpass-900 - black-italic */
+@font-face {
+    font-family: 'Overpass';
+    font-style: italic;
+    font-weight: 900;
+    src: url(./assets/fonts/Overpass/Overpass-BlackItalic.ttf);
+}

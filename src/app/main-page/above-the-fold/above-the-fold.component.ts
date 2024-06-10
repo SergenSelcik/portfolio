@@ -1,12 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
+  arrows = [0, 1, 2, 3, 4];
 
+  getArrowSrc(index: number): string {
+    return `./assets/img/arrow_${index}.png`;
+  }
 }

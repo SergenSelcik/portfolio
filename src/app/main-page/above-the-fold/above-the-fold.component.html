@@ -1,1 +1,31 @@
-<p>above-the-fold works!</p>
+<div class="bg_style">
+    <div class="max_width">
+        <div class="above_the_fold">
+        <div class="h1_container">
+            <h1>Frontend</h1>
+            <h1>Developer</h1>
+            <div class="h1_line_n_name_container">
+                <div class="h1_line"></div>
+                <div class="name_container">
+                    <h2>Sergen Selcik</h2>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>
+            <div class="email_container">
+                <a href="#" class="email">sergen.selcik&#64;hotmail.com</a>
+            </div>
+            <div class="scroll_container">
+                <div class="arrow_container">
+                    @for (i of arrows; track $index){
+                    <img [src]="getArrowSrc(i)" [id]="'arrow_' + i" alt="an arrow flying downward">
+                    }
+                </div>
+                <div class="scroll_text">
+                    <span>Scroll Down</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
