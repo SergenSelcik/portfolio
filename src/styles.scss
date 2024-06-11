@@ -5,6 +5,29 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFCF3;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #656565;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #939393;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
 @mixin dFlex($jc: center, $ai: center) {
     display: flex;
     justify-content: $jc;

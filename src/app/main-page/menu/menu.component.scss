@@ -49,6 +49,11 @@
     @include dFlex($jc: center, $ai: center);
     position: relative;
 
+    a {
+        text-decoration: none;
+        z-index: 1000;
+    }
+
     .nav_line_0 {
         @include position($pos: absolute, $top: auto, $left: 0, $bottom: 0, $right: auto);
         height: 60px;
@@ -170,5 +175,11 @@
     img {
         width: 30px;
         cursor: pointer;
+        transition: all 125ms ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
+
 }

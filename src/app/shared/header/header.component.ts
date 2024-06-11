@@ -63,7 +63,7 @@ export class HeaderComponent {
       } else {
         this.currentImage = currentImages[this.stage];
       }
-    }, 35);
+    }, 25);
   }
 
   toggleMenuRoute() {

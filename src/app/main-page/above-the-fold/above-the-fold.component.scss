@@ -28,6 +28,7 @@
     h1 {
         @include fontStyle($ff: 'Syne', $fs: 158px, $fw: 800, $lh: 128px, $c: #000000);
         letter-spacing: -2.5px;
+        cursor: default;
     }
 
     .h1_line_n_name_container {
@@ -52,6 +53,7 @@
                 @include position($pos: absolute, $top: auto, $left: auto, $bottom: 55px, $right: 50px);
                 @include fontStyle($ff: 'Overpass', $fs: 55px, $fw: 700, $lh: unset, $c: #FF9900);
                 letter-spacing: -1.5px;
+                cursor: default;
             }
         }
     }
@@ -115,6 +117,7 @@
         span {
             @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #000000);
             letter-spacing: -1.5px;
+            cursor: default;
         }
     }
 }
