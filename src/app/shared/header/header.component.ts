@@ -73,4 +73,8 @@ export class HeaderComponent {
       this.router.navigate(['/menu']);
     }
   }
+
+  get isMenuRoute(): boolean {
+    return this.router.url === '/menu';
+  }
 }

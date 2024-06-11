@@ -5,5 +5,4 @@ import { MenuComponent } from './main-page/menu/menu.component';
 export const routes: Routes = [
     { path: '', component: MainPageComponent },
     { path: 'menu', component:  MenuComponent},
-    // { path: '', redirectTo: '/mainpage', pathMatch: 'full' }
   ];
