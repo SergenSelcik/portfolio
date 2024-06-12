@@ -1,1 +1,36 @@
-<p>about-me works!</p>
+<div class="bg_style">
+    <div class="max_width">
+        <div class="about_me_section">
+            <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="100" data-aos-duration="1200" data-aos-easing="ease-in-out"  id="about-me" class="about_me_text_container">
+                <div class="h1_container">
+                    About me
+                </div>
+                <div class="text_container">
+                    I am a Frontend developer based in Wülfrath, Germany. I enjoy helping designers and companies bring
+                    their ideas into real life. I am looking forward to continuing my developer career with a job in
+                    a
+                    junior web developer position.
+                </div>
+                <div class="text_container">If you think I'd be a good match for your projects, contact me!</div>
+                <div class="button_container">
+                    <button>
+                        Let's talk
+                    </button>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="100" data-aos-duration="1200" data-aos-easing="ease-in-out" class="about_me_image">
+                <img src="./assets/img/myself.jpg" alt="a picture about my appearance">
+                <div class="border"></div>
+            </div>
+        </div>
+        <div class="arrow_container" >
+            <div class="arrow_images">
+                @if (firstHover) {
+                    <img class="arrow_short_start" src="./assets/img/arrow_short.png" alt="arrow looking down" (mouseenter)="onHover()">
+                }
+                <img class="arrow_long" src="./assets/img/arrow_long.png" alt="arrow looking down" [ngClass]="{'animated': !firstHover}">
+                <img class="arrow_short_end" src="./assets/img/arrow_short.png" alt="arrow looking down" [ngClass]="{'animated': !firstHover}">
+            </div>
+          </div>
+    </div>
+</div>

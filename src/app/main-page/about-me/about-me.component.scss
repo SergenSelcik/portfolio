@@ -1,0 +1,159 @@
+@import '../../../styles.scss';
+
+
+:host {
+    display: block;
+}
+
+.bg_style {
+    background-color: #FFFCF3;
+}
+
+.max_width {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.about_me_section {
+    display: flex;
+    gap: 100px;
+    height: 1000px;
+}
+
+.about_me_text_container {
+    @include position($pos: relative, $top: 200px, $left: 0, $bottom: auto, $right: auto);
+    @include dFlex($jc: center, $ai: start);
+    @include size($w: 819px, $h: 554px);
+    flex-direction: column;
+    gap: 52px;
+
+    .h1_container {
+        @include dFlex($jc: center, $ai: center);
+        @include fontStyle($ff: 'Syne', $fs: 104px, $fw: 800, $lh: 104px, $c: #000000);
+        transition: all 125ms ease;
+        cursor: default;
+
+        &:hover {
+            color: #FF9900;
+        }
+    }
+
+    .text_container {
+        @include fontStyle($ff: 'Overpass', $fs: 29px, $fw: 400, $lh: 36.6px, $c: #000000);
+        cursor: default;
+    }
+
+    .button_container {
+        @include dFlex($jc: center, $ai: center);
+        width: 100%;
+    }
+
+    .button_container button {
+        @include dFlex($jc: center, $ai: center);
+        @include size($w: 258px, $h: 85px);
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #000000);
+        background-color: #FFFCF3;
+        border: 4px solid black;
+        padding: 20px 60px 20px 60px;
+        transition: all 125ms ease;
+        cursor: pointer;
+
+        &:hover {
+            width: 318px;
+            @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
+        }
+
+        &:active {
+            background-color: #000000;
+            color: #FFFCF3;
+        }
+    }
+}
+
+
+.about_me_image {
+    @include size($w: 643px, $h: 643px);
+    align-self: flex-end;
+
+    img {
+        height: 623px;
+    }
+
+    .border {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+        @include size($w: 623px, $h: 623px);
+        border: 4px solid black;
+        opacity: 0;
+        transition: opacity 125ms ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.arrow_container {
+    @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+    @include size($w: 100%, $h: 340px);
+
+    .arrow_images {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 320px);
+        @include size($w: 350px, $h: 100%);
+        cursor: pointer;
+
+        .arrow_short_start {
+            @include position($pos: absolute, $top: 0, $left: auto, $bottom: auto, $right: 0);
+            z-index: 10;
+            height: 280px;
+        }
+
+        .arrow_long {
+            @include position($pos: absolute, $top: 50px, $left: auto, $bottom: auto, $right: 51px);
+            opacity: 0;
+            height: 260px;
+            z-index: 1;
+        }
+
+        .arrow_short_end {
+            @include position($pos: absolute, $top: 90px, $left: auto, $bottom: auto, $right: 91px);
+            opacity: 0;
+            z-index: 5;
+            height: 280px;
+        }
+    }
+
+    .arrow_short_end.animated {
+        animation: fadeIn 500ms forwards 1ms;
+    }
+
+    .arrow_long.animated {
+        animation: fadeIn 125ms forwards 1ms, fadeOutLong 500ms forwards 125ms;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOutLong {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}
