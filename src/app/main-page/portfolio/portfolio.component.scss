@@ -1,0 +1,40 @@
+@import '../../../styles.scss';
+
+:host {
+    display: block;
+
+    .bg_style {
+        background-color: #FFFCF3;
+
+        .max_width {
+            position: relative;
+            max-width: 1600px;
+            margin: 0 auto;
+            @include dFlex($jc: center, $ai: center);
+            flex-direction: column;
+        }
+    }
+}
+
+.portfolio_container {
+    @include dFlex($jc: center, $ai: center);
+    height: 300px;
+    width: 700px;
+    flex-direction: column;
+    gap: 40px;
+    cursor: default;
+    margin: 80px;
+
+    >h1 {
+        @include fontStyle($ff: 'Syne', $fs: 104px, $fw: 800, $lh: 104px, $c: #000000);
+    }
+
+    >span {
+        @include fontStyle($ff: 'Overpass', $fs: 34px, $fw: 400, $lh: 41.6px, $c: #000000);
+        @include dFlex($jc: center, $ai: center);
+    }
+}
+
+app-projects {
+    width: 100%;
+}

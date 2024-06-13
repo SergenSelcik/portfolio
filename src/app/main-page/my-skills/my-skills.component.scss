@@ -2,17 +2,114 @@
 
 :host {
     display: block;
-    height: 100vh;
 }
 
 .bg_style {
     background-color: #FFFCF3;
-    height: 100%;
 }
 
 .max_width {
     position: relative;
     max-width: 1600px;
     margin: 0 auto;
-    height: 100%;
+}
+
+.my_skills_container {
+    @include dFlex($jc: center, $ai: end);
+    height: 760px;
+}
+
+.my_skills {
+    @include size($w: 1520px, $h: 600px);
+    border: 4px solid black;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        width: 700px;
+        height: 4px;
+        background-color: #FFFCF3;
+        transform: translateX(-50%);
+    }
+
+    h1 {
+        @include position($pos: absolute, $top: 0, $left: 50%, $bottom: auto, $right: auto);
+        @include fontStyle($ff: 'Syne', $fs: 98px, $fw: 800, $lh: 98px, $c: #000000);
+        transform: translate(-50%, -50%);
+        transition: all 125ms ease;
+        cursor: default;
+
+        &:hover {
+            color: #FF9900;
+        }
+    }
+}
+
+
+.arrow_container {
+    @include position($pos: relative, $top: 0, $left: 0, $bottom: auto, $right: auto);
+    @include size($w: 100%, $h: 340px);
+
+    .arrow_images {
+        @include position($pos: absolute, $top: 20px, $left: 40px, $bottom: auto, $right: auto);
+        @include size($w: 350px, $h: 100%);
+        cursor: pointer;
+
+        .arrow_short_start {
+            @include position($pos: absolute, $top: 0, $left: 0, $bottom: auto, $right: auto);
+            z-index: 10;
+            height: 280px;
+        }
+
+        .arrow_long {
+            @include position($pos: absolute, $top: 50px, $left: 51px, $bottom: auto, $right: auto);
+            opacity: 0;
+            height: 260px;
+            z-index: 1;
+        }
+
+        .arrow_short_end {
+            @include position($pos: absolute, $top: 90px, $left: 91px, $bottom: auto, $right: auto);
+            opacity: 0;
+            z-index: 5;
+            height: 280px;
+        }
+    }
+
+    .arrow_short_end.animated {
+        animation: fadeIn 500ms forwards 1ms;
+    }
+
+    .arrow_long.animated {
+        animation: fadeIn 125ms forwards 1ms, fadeOutLong 500ms forwards 125ms;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOutLong {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
 }

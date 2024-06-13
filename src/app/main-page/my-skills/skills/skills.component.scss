@@ -1,0 +1,31 @@
+@import '../../../../styles.scss';
+
+.skills_container {
+    @include dFlex($jc: center);
+    flex-wrap: wrap;
+    column-gap: 200px;
+    row-gap: 50px;
+    padding: 160px 140px;
+}
+
+.skill{
+    @include dFlex($jc: center, $ai: center);
+    @include fontStyle($ff: 'Overpass', $fs: 19px, $fw: 700, $lh: 19.2px, $c: #000000);
+    flex-direction: column;
+    gap: 14px;
+    width: 80px;
+    text-align: center;
+    transition: all 125ms ease;
+
+    img {
+        @include size($w: 70px, $h: 70px);
+    }
+
+    &:hover {
+        color: #FF9900;
+
+        img {
+            transform: translateY(-20px);
+        }
+    }
+}

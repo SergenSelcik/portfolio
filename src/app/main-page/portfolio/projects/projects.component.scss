@@ -1,0 +1,120 @@
+@import '../../../../styles.scss';
+
+.project_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    .project {
+        @include dFlex($ai: center);
+        gap: 100px;
+
+        &:hover {
+            .border {
+                opacity: 1;
+            }
+
+            .project_img>img {
+                filter: brightness(100%);
+            }
+
+            .project_content {
+                opacity: 1;
+                animation: slide 0.5s forwards;
+            }
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            .project_content {
+                left: 830px;
+                animation: slide-reverse 0.5s forwards;
+            }
+        }
+    }
+
+    .project_img {
+        min-width: 850px;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+
+        >img {
+            height: 450px;
+            transition: filter 250ms ease;
+            filter: brightness(80%);
+        }
+
+        .border {
+            @include position($pos: absolute, $top: 20px, $left: 20px, $bottom: auto, $right: auto);
+            @include size($w: 805px, $h: 450px);
+            border: 4px solid black;
+            opacity: 0;
+            transition: opacity 250ms ease;
+            z-index: 10;
+        }
+    }
+
+    .project_content {
+        position: relative;
+        z-index: 1;
+        left: -830px;
+        @include dFlex($jc: center, $ai: start);
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 600px;
+        opacity: 0;
+        transition: opacity 250ms ease;
+
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 52px, $fw: 800, $lh: 52px, $c: #000000);
+            cursor: default
+        }
+
+        .technologies {
+            @include fontStyle($ff: 'Overpass', $fs: 30px, $fw: 400, $lh: 34.6px, $c: #FF9900);
+            cursor: default
+        }
+
+        .description {
+            @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 400, $lh: 27.2px, $c: #000000);
+            cursor: default
+        }
+
+        a {
+            @include dFlex($jc: center, $ai: center);
+            @include size($w: 200px, $h: 85px);
+            @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #000000);
+            background-color: #FFFCF3;
+            border: 4px solid black;
+            padding: 20px 60px 20px 60px;
+            transition: all 125ms ease;
+            cursor: pointer;
+            text-decoration: none;
+
+            &:hover {
+                width: 250px;
+                @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
+            }
+
+            &:active {
+                background-color: #000000;
+                color: #FFFCF3;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    100% {
+        left: 0;
+    }
+}

@@ -59,6 +59,11 @@
         transition: all 125ms ease;
         cursor: pointer;
 
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
         &:hover {
             width: 318px;
             @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
@@ -67,6 +72,10 @@
         &:active {
             background-color: #000000;
             color: #FFFCF3;
+
+            a {
+                color: white;
+            }
         }
     }
 }

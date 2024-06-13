@@ -1,4 +1,22 @@
 <div class="bg_style">
     <div class="max_width">
+        <div class="my_skills_container">
+            <div class="my_skills">
+                <h1>My skills</h1>
+                <app-skills></app-skills>
+            </div>
+        </div>
+        <div class="arrow_container">
+            <div class="arrow_images">
+                @if (firstHover) {
+                <img class="arrow_short_start" src="./assets/img/arrow_short_2.png" alt="arrow looking down"
+                    (mouseenter)="onHover()">
+                }
+                <img class="arrow_long" src="./assets/img/arrow_long_2.png" alt="arrow looking down"
+                    [ngClass]="{'animated': !firstHover}">
+                <img class="arrow_short_end" src="./assets/img/arrow_short_2.png" alt="arrow looking down"
+                    [ngClass]="{'animated': !firstHover}">
+            </div>
+        </div>
     </div>
 </div>

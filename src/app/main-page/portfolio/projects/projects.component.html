@@ -1,0 +1,17 @@
+<div class="project_container">
+    @for (project of projects; track $index) {
+    <div class="project">
+        <div class="project_img">
+            <img src="{{project.image}}" alt="">
+            <div class="border"></div>
+        </div>
+        <div class="project_content">
+            <h1>{{project.name}}</h1>
+            <span class="technologies">{{project.technologies}}</span>
+            <span class="description">{{project.description}}</span>
+            <a target="_blank" href="{{project.github}}">Github</a>
+        </div>
+    </div>
+
+    }
+</div>

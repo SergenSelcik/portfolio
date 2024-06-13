@@ -1,0 +1,8 @@
+<div  class="skills_container">
+    @for (skill of skills; track $index) {
+    <div class="skill">
+        <img data-aos="zoom-in-down" data-aos-easing="ease-out-cubic"  data-aos-duration="500" src="{{skill.image}}" alt="">
+        {{skill.name}}
+    </div>
+    }
+</div>
