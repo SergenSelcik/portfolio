@@ -1,17 +1,20 @@
 <div class="project_container">
     @for (project of projects; track $index) {
-    <div class="project">
+    <div class="project" [ngClass]="{'swap_content': project.swapcontent}"
+        [attr.data-aos]="project.swapcontent? 'fade-down-left' : 'fade-down-right'" data-aos-easing="ease-in-sine"
+        data-aos-delay="25" data-aos-duration="500">
         <div class="project_img">
-            <img src="{{project.image}}" alt="">
-            <div class="border"></div>
+            <img src="{{ project.image }}" alt="">
+            <div class="border">
+                <img class="arrow_img" src="./assets/img/arrow_in_circle.png" alt="an arrow in a circle">
+            </div>
         </div>
         <div class="project_content">
-            <h1>{{project.name}}</h1>
-            <span class="technologies">{{project.technologies}}</span>
-            <span class="description">{{project.description}}</span>
-            <a target="_blank" href="{{project.github}}">Github</a>
+            <h1>{{ project.name }}</h1>
+            <span class="technologies">{{ project.technologies }}</span>
+            <span class="description">{{ project.description }}</span>
+            <a target="_blank" href="{{ project.github }}">Github</a>
         </div>
     </div>
-
     }
 </div>

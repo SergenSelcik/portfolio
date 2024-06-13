@@ -19,6 +19,7 @@ export class ProjectsService {
       technologies: 'JavaScript | CSS | HTML',
       description: 'A simple Jump-and-Run game based on object-oriented approach. Help Melandis the lighting wizard to find gems and mana-potions for his fight against the cruel warlord Kragg.',
       github: 'https://github.com/SergenSelcik/magic-run-orc-invasion',
+      swapcontent: true
     },
     {
       name: 'Pokédex',

@@ -38,3 +38,68 @@
 app-projects {
     width: 100%;
 }
+
+.arrow_container {
+    @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+    @include size($w: 100%, $h: 340px);
+
+    .arrow_images {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 150px);
+        @include size($w: 350px, $h: 100%);
+        cursor: pointer;
+
+        .arrow_short_start {
+            @include position($pos: absolute, $top: 0, $left: auto, $bottom: auto, $right: 0);
+            z-index: 10;
+            height: 280px;
+        }
+
+        .arrow_long {
+            @include position($pos: absolute, $top: 50px, $left: auto, $bottom: auto, $right: 51px);
+            opacity: 0;
+            height: 260px;
+            z-index: 1;
+        }
+
+        .arrow_short_end {
+            @include position($pos: absolute, $top: 90px, $left: auto, $bottom: auto, $right: 91px);
+            opacity: 0;
+            z-index: 5;
+            height: 280px;
+        }
+    }
+
+    .arrow_short_end.animated {
+        animation: fadeIn 500ms forwards 1ms;
+    }
+
+    .arrow_long.animated {
+        animation: fadeIn 125ms forwards 1ms, fadeOutLong 500ms forwards 125ms;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeOutLong {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}
