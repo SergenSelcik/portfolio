@@ -140,11 +140,12 @@
         @include size($w: 425px, $h: 80px);
         position: relative;
 
-        >span {
+        >a {
             @include position($pos: relative, $top: auto, $left: 0, $bottom: 0, $right: auto);
             @include fontStyle($ff: 'Syne', $fs: 78px, $fw: 800, $lh: 78px, $c: #FFFCF3);
             transition: all 125ms ease;
             cursor: pointer;
+            text-decoration: none;
 
             &:hover {
                 color: #FF9900;
@@ -181,5 +182,4 @@
             transform: scale(1.2);
         }
     }
-
 }

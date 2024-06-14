@@ -2,20 +2,22 @@
     <div class="max_width">
         <div class="portfolio_container">
             <h1>Portfolio</h1>
-            <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span> 
+            <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
         </div>
         <app-projects></app-projects>
         <div class="arrow_container">
-            <div class="arrow_images">
-                @if (firstHover) {
-                <img class="arrow_short_start" src="./assets/img/arrow_short.png" alt="arrow looking down"
-                    (mouseenter)="onHover()">
-                }
-                <img class="arrow_long" src="./assets/img/arrow_long.png" alt="arrow looking down"
-                    [ngClass]="{'animated': !firstHover}">
-                <img class="arrow_short_end" src="./assets/img/arrow_short.png" alt="arrow looking down"
-                    [ngClass]="{'animated': !firstHover}">
-            </div>
+            <a href="#Contact">
+                <div class="arrow_images">
+                    @if (firstHover) {
+                    <img class="arrow_short_start" src="./assets/img/arrow_short.png" alt="arrow looking down"
+                        (mouseenter)="onHover()">
+                    }
+                    <img class="arrow_long" src="./assets/img/arrow_long.png" alt="arrow looking down"
+                        [ngClass]="{'animated': !firstHover}">
+                    <img class="arrow_short_end" src="./assets/img/arrow_short.png" alt="arrow looking down"
+                        [ngClass]="{'animated': !firstHover}">
+                </div>
+            </a>
         </div>
     </div>
 </div>

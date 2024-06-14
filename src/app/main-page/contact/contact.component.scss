@@ -1,0 +1,178 @@
+@import '../../../styles.scss';
+
+
+.bg_style {
+    @include position($pos: relative, $top: auto, $left: auto, $bottom: 0px, $right: auto);
+    width: 100%;
+    min-height: 1150px;
+    max-height: 700px;
+    z-index: 1;
+
+    img {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0px, $right: auto);
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.max_width {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 2;
+}
+
+.contact_content {
+    display: flex;
+    flex-direction: column;
+
+    >span {
+        @include position($pos: relative, $top: 0px, $left: 0, $bottom: auto, $right: auto);
+        @include fontStyle($ff: 'Syne', $fs: 98px, $fw: 800, $lh: 98px, $c: #FFFCF3);
+        margin-top: 200px;
+        margin-bottom: 80px;
+        transition: all 125ms ease;
+        z-index: 1;
+        cursor: default;
+
+        &:hover {
+            color: #FF9900;
+        }
+    }
+}
+
+.form_content {
+    @include dFlex($jc: center, $ai: center);
+    flex-direction: column;
+    gap: 22px;
+    cursor: default;
+
+    >span:nth-child(1) {
+        @include fontStyle($ff: 'Overpass', $fs: 40px, $fw: 700, $lh: 46.4px, $c: #FF9900);
+    }
+
+    >span:nth-child(2) {
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.2px, $c: #FFFCF3);
+    }
+}
+
+form {
+    @include dFlex($jc: center, $ai: center);
+    @include size($w: 760px, $h: 100%);
+    flex-direction: column;
+    gap: 14px;
+    cursor: default;
+
+    label {
+        @include position($pos: relative, $top: 4px, $left: 20px, $bottom: auto, $right: auto);
+        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 21.2px, $c: #FFFCF3);
+        height: 0px;
+        width: 100%;
+        background: none;
+        z-index: 2;
+    }
+
+    .border {
+        height: 63px;
+        width: 100%;
+        border: 1px solid white;
+        background: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 18px;
+            width: 92px;
+            height: 4px;
+            background-color: #000000;
+        }
+
+        input {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: rgb(0, 0, 0);
+            padding-left: 30px;
+
+            // &:hover {
+            //     border: 4px solid #FFFCF3;
+            // }
+
+        }
+    }
+
+    .border_textarea {
+        height: 250px;
+        width: 100%;
+        border: 1px solid white;
+        background: none;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 18px;
+            width: 115px;
+            height: 4px;
+            background-color: #000000;
+        }
+    }
+
+    textarea {
+        @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+        width: 100%;
+        min-height: 250px;
+        max-height: 250px;
+        min-width: 760px;
+        max-width: 760px;
+        background: none;
+        border: unset;
+        border-bottom: 2px solid white;
+        padding-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        // &:hover {
+        //     border: 1px solid #FFFCF3;
+        // }
+    }
+
+    &:focus {
+        outline: 2px solid #FFFCF3;
+
+        &:hover {
+            border: unset;
+            border-bottom: unset
+        }
+    }
+}
+
+input::placeholder,
+textarea::placeholder {
+    @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+    padding-right: 30px;
+}
+
+button {
+    @include dFlex($jc: center, $ai: center);
+    @include size($w: 330px, $h: 85px);
+    @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #BBBBBB);
+    margin-top: 20px;
+    background-color: #000000;
+    border: 4px solid #BBBBBB;
+    padding: 20px 60px 20px 60px;
+    transition: all 125ms ease;
+    cursor: pointer;
+
+    &:hover {
+        width: 380px;
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #BBBBBB);
+
+    }
+}

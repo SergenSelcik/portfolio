@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AboveTheFoldComponent } from '../../main-page/above-the-fold/above-the-fold.component';
 import { Router, RouterLink } from '@angular/router';
 import { MenuComponent } from '../../main-page/menu/menu.component';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -31,7 +32,7 @@ export class HeaderComponent {
   currentImage: string = this.images[this.stage];
   isAnimating: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(public menuService: MenuService, private router: Router) { }
 
   animateBurgerMenu() {
     if (this.isAnimating) {
@@ -44,6 +45,7 @@ export class HeaderComponent {
     this.currentImage = currentImages[this.stage];
     this.imageAnimationInterval();
     this.toggleMenuRoute();
+    this.menuService.toggleMenu();
   }
 
   clearInterval() {
@@ -76,5 +78,9 @@ export class HeaderComponent {
 
   get isMenuRoute(): boolean {
     return this.router.url === '/menu';
+  }
+
+  get isImprintRoute(): boolean {
+    return this.router.url === '/imprint';
   }
 }
