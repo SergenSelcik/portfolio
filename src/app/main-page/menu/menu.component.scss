@@ -137,12 +137,12 @@
     gap: 10px;
 
     .nav_footer_text {
-        @include size($w: 425px, $h: 80px);
+        @include size($w: 660px, $h: 80px);
         position: relative;
 
         >a {
             @include position($pos: relative, $top: auto, $left: 0, $bottom: 0, $right: auto);
-            @include fontStyle($ff: 'Syne', $fs: 78px, $fw: 800, $lh: 78px, $c: #FFFCF3);
+            @include fontStyle($ff: 'Syne', $fs: 68px, $fw: 800, $lh: 68px, $c: #FFFCF3);
             transition: all 125ms ease;
             cursor: pointer;
             text-decoration: none;
