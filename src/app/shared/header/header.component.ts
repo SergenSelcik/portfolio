@@ -83,4 +83,8 @@ export class HeaderComponent {
   get isImprintRoute(): boolean {
     return this.router.url === '/imprint';
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

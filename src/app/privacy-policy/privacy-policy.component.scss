@@ -1,0 +1,64 @@
+@import '../../styles.scss';
+
+.bg_style {
+    background-color: #FFFCF3;
+    margin-right: 9.5px;
+}
+
+.max_width {
+    @include dFlex($jc: center, $ai: center);
+    flex-direction: column;
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 300, $lh: 24px, $c: #000000);
+
+    h1{
+        @include fontStyle($ff: 'Overpass', $fs: 68px, $fw: 500, $lh: 68px, $c: #000000);
+        letter-spacing: -3.5px;
+    }
+
+    h2{
+        @include fontStyle($ff: 'Overpass', $fs: 38px, $fw: 700, $lh: 38px, $c: #000000);
+        letter-spacing: -1.5px;
+    }
+
+    h3{
+        @include fontStyle($ff: 'Overpass', $fs: 30px, $fw: 600, $lh: 30px, $c: #000000);
+        letter-spacing: -1.5px;
+    }
+
+    h4{
+        @include fontStyle($ff: 'Overpass', $fs: 26px, $fw: 600, $lh: 26px, $c: #000000);
+        letter-spacing: -1.5px;
+    }
+
+    p{
+        @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 300, $lh: 22px, $c: #000000);
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #FF9900;
+    }
+}
+
+.margin_right {
+    margin-right: 9.5px;
+}

@@ -10,8 +10,7 @@
 
     img {
         @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0px, $right: auto);
-        height: 100%;
-        width: 100%;
+        @include size($w: 100%, $h: 100%);
         z-index: 1;
     }
 }
@@ -19,8 +18,8 @@
 .max_width {
     position: relative;
     max-width: 1600px;
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
     z-index: 2;
 }
 
@@ -62,117 +61,252 @@ form {
     @include dFlex($jc: center, $ai: center);
     @include size($w: 760px, $h: 100%);
     flex-direction: column;
-    gap: 14px;
+    gap: 20px;
     cursor: default;
 
-    label {
-        @include position($pos: relative, $top: 4px, $left: 20px, $bottom: auto, $right: auto);
-        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 21.2px, $c: #FFFCF3);
-        height: 0px;
-        width: 100%;
-        background: none;
-        z-index: 2;
-    }
-
-    .border {
-        height: 63px;
-        width: 100%;
-        border: 1px solid white;
-        background: none;
+    .input_container {
         position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -4px;
-            left: 18px;
-            width: 92px;
-            height: 4px;
-            background-color: #000000;
+        label {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
+            @include position($pos: absolute, $top: 21px, $left: 25px, $bottom: auto, $right: auto);
+            transition: .2s;
+            padding: 0 2px;
+            pointer-events: none;
+
+            &.filled {
+                top: -10px;
+                color: #FF9900;
+                background-color: #000000;
+                transition: .2s;
+            }
         }
 
         input {
             @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
-            width: 100%;
-            height: 100%;
+            @include size($w: 100%, $h: 60px);
             border: none;
             background: rgb(0, 0, 0);
-            padding-left: 30px;
+            padding: 15px 25px;
+            border-bottom: 2px solid white;
+            transition: all 125ms ease;
 
-            // &:hover {
-            //     border: 4px solid #FFFCF3;
-            // }
+            &:hover {
+                border: 4px solid #FFFCF3;
+            }
 
+            &:focus {
+                outline: 2px solid #FFFCF3;
+                border: unset;
+                border-bottom: unset;
+                transition: all 125ms ease;
+
+                &+label {
+                    top: -10px;
+                    color: #FF9900;
+                    transition: all 125ms ease;
+                    background-color: #000000;
+                }
+            }
         }
     }
 
-    .border_textarea {
-        height: 250px;
-        width: 100%;
-        border: 1px solid white;
-        background: none;
+    .textarea_container {
         position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -4px;
-            left: 18px;
-            width: 115px;
-            height: 4px;
-            background-color: #000000;
-        }
-    }
-
-    textarea {
-        @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        min-height: 250px;
-        max-height: 250px;
-        min-width: 760px;
-        max-width: 760px;
-        background: none;
-        border: unset;
-        border-bottom: 2px solid white;
-        padding-top: 20px;
-        padding-left: 30px;
-        padding-right: 30px;
 
-        // &:hover {
-        //     border: 1px solid #FFFCF3;
-        // }
-    }
+        label {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
+            @include position($pos: absolute, $top: 21px, $left: 25px, $bottom: auto, $right: auto);
+            transition: .2s;
+            padding: 0 2px;
+            pointer-events: none;
 
-    &:focus {
-        outline: 2px solid #FFFCF3;
+            &.filled {
+                top: -10px;
+                color: #FF9900;
+                background-color: #000000;
+                transition: .2s;
+            }
+        }
 
-        &:hover {
+        textarea {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+            width: 100%;
+            min-height: 250px;
+            max-height: 250px;
+            min-width: 760px;
+            max-width: 760px;
+            background: none;
             border: unset;
-            border-bottom: unset
+            border-bottom: 2px solid white;
+            padding: 15px 25px;
+            transition: all 125ms ease;
+            resize: none;
+
+            &:hover {
+                border: 4px solid #FFFCF3;
+            }
+
+            &:focus {
+                outline: 2px solid #FFFCF3;
+                border: unset;
+                border-bottom: unset;
+                transition: all 125ms ease;
+
+                &+label {
+                    top: -10px;
+                    color: #FF9900;
+                    transition: all 125ms ease;
+                    background-color: #000000;
+                }
+            }
         }
     }
 }
 
-input::placeholder,
-textarea::placeholder {
-    @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
-    padding-right: 30px;
+.filled {
+    transition: all 125ms ease;
+
+    &+label {
+        top: -10px;
+        color: #FF9900;
+        transition: all 125ms ease;
+        background-color: #000000;
+        outline: none;
+    }
+}
+
+.privacy_policy_container {
+    display: flex;
+    flex-direction: column;
+    @include size($w: 100%, $h: 60px);
+
+    .privacy_policy_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+
+    .checkbox {
+        cursor: pointer;
+        min-width: 18px;
+        margin-bottom: 5px;
+        height: 21px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 125ms ease-in;
+        padding: 9px;
+
+        &:hover {
+            background-color: #FF9900;
+            height: 20px;
+            border-radius: 2px;
+        }
+    }
+}
+
+.checkbox_unchecked {
+    background-image: url('../../../assets/img/checkbox_unchecked.png');
+}
+
+.checkbox_checked {
+    background-image: url('../../../assets/img/checkbox_checked.png');
+}
+
+.privacy_policy_text_container {
+    @include size($w: 100%, $h: 100%);
+    @include dFlex($jc: center, $ai: center);
+
+    .privacy_policy_text {
+        @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
+        @include dFlex($jc: center, $ai: center);
+        width: 100%;
+        text-align: center;
+
+        a {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FF9900);
+            text-decoration: none;
+            display: inline-block;
+            width: 140px;
+            transition: all 250ms ease;
+
+            &:hover {
+                transform: translateY(-1px) scale(1.05);
+                transition: transform 250ms ease;
+            }
+        }
+    }
+}
+
+.error {
+    @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #E61C40);
+    @include dFlex($jc: start, $ai: center);
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 250ms forwards;
+}
+
+.valid_container {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    height: 30px;
+    width: 29px;
+    background-size: cover;
+    opacity: 0;
+    animation: fadeIn 250ms forwards;
+}
+
+.error_container {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    height: 29px;
+    width: 29.5px;
+    background-size: cover;
+    opacity: 0;
+    animation: fadeIn 250ms forwards;
+}
+
+.error_img {
+    background-image: url('../../../assets/img/error.png');
+}
+
+.valid_img {
+    background-image: url('../../../assets/img/valid.png');
 }
 
 button {
     @include dFlex($jc: center, $ai: center);
     @include size($w: 330px, $h: 85px);
-    @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #BBBBBB);
-    margin-top: 20px;
+    @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #3b3b3b);
     background-color: #000000;
-    border: 4px solid #BBBBBB;
+    border: 4px solid #3b3b3b;
     padding: 20px 60px 20px 60px;
     transition: all 125ms ease;
     cursor: pointer;
 
     &:hover {
         width: 380px;
-        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #BBBBBB);
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #3b3b3b);
+    }
+}
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

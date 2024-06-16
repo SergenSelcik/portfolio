@@ -33,6 +33,11 @@
         letter-spacing: -3.5px;
     }
 
+    h2{
+        @include fontStyle($ff: 'Overpass', $fs: 38px, $fw: 700, $lh: 38px, $c: #000000);
+        letter-spacing: -1.5px;
+    }
+
     a {
         text-decoration: none;
         font-weight: 600;
