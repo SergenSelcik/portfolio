@@ -10,10 +10,8 @@
                     <div class="input_container">
                         <input #name="ngModel" [(ngModel)]="contactData.name" pattern="[a-zA-Z0-9 ]*" name="name"
                             maxlength="50" id="name" type="text" required>
-                        @if (contactData.name !== null) {
                         <label [class.label]="contactData.name.length > 0" for="name">Your
                             name</label>
-                        }
                         @if (name.valid && name.value && name.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
@@ -76,7 +74,7 @@
                         <span class="error">Please accept the privacy policy.</span>
                         }
                     </div>
-                    <button type="submit" [disabled]="!contactForm.form.valid || !isChecked"
+                    <button type="submit" [disabled]="!contactForm.form.valid"
                         [ngClass]="{'enabled': contactForm.form.valid && isChecked}">Send message</button>
                 </form>
             </div>

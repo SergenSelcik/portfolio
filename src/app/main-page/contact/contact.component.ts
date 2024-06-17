@@ -12,11 +12,12 @@ import { Router, RouterLink } from '@angular/router';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+
   constructor(private router: Router) { }
   isChecked: boolean = false;
   http = inject(HttpClient);
   mailTest = true;
-  attemptedSubmit: boolean = false; 
+  attemptedSubmit: boolean = false;
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
@@ -27,14 +28,14 @@ export class ContactComponent {
   }
 
   contactData = {
-    name : "",
+    name: "",
     email: "",
     message: ""
   }
 
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://sergen-selcik.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -45,21 +46,29 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.isChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
 
             ngForm.resetForm();
+            this.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.isChecked) {
       ngForm.resetForm();
+      this.resetForm()
     }
+  }
+
+  resetForm() {
+    this.contactData.name = '';
+    this.contactData.email = '';
+    this.contactData.message = '';
+    this.isChecked = false;
   }
 }
