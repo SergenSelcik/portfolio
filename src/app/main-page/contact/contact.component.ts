@@ -4,12 +4,6 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
-export interface ContactData {
-  name: string;
-  email: string;
-  message: string;
-}
-
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -31,11 +25,11 @@ export class ContactComponent {
     return this.router.url === '/privacy-policy';
   }
 
-  contactData: ContactData = {
-    name: '',
-    email: '',
-    message: ''
-  };
+  contactData = {
+    name : "",
+    email: "",
+    message: ""
+  }
 
 
   post = {
