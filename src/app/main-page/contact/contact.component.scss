@@ -296,9 +296,16 @@ button {
     transition: all 125ms ease;
     cursor: pointer;
 
+
+}
+
+.enabled {
+    color: #FFFCF3;
+    border-color: #FFFCF3;
+
     &:hover {
         width: 380px;
-        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #3b3b3b);
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #FFFCF3);
     }
 }
 

@@ -16,6 +16,7 @@ export class ContactComponent {
   isChecked: boolean = false;
   http = inject(HttpClient);
   mailTest = true;
+  attemptedSubmit: boolean = false; 
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;

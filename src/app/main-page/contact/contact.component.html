@@ -14,7 +14,7 @@
                         <label [class.label]="contactData.name.length > 0" for="name">Your
                             name</label>
                         }
-                        @if (name.valid && name.value.length > 0) {
+                        @if (name.valid && name.value && name.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
                         @if (name.invalid && name.touched &&!name.disabled) {
@@ -31,7 +31,7 @@
                             id="email" type="email" required>
                         <label [class.label]="contactData.email.length > 0" for="email">Your
                             email</label>
-                        @if (email.valid && email.value.length > 0) {
+                        @if (email.valid && email.value && email.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
                         @if (email.invalid && email.touched &&!email.disabled) {
@@ -47,7 +47,7 @@
                             cols="30" rows="10" maxlength="612" required></textarea>
                         <label [class.label]="contactData.message.length > 0" for="message">Your
                             message</label>
-                        @if (message.valid && message.value.length > 0) {
+                        @if (message.valid && message.value && message.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
                         @if (message.invalid && message.touched &&!message.disabled) {
@@ -72,13 +72,13 @@
                                 </div>
                             </div>
                         </div>
-                        @if (contactForm.submitted &&!isChecked){
+                        @if (contactForm.submitted && !isChecked){
                         <span class="error">Please accept the privacy policy.</span>
                         }
                     </div>
-                    <button type="submit" value="Submit">Send message</button>
+                    <button type="submit" [disabled]="!contactForm.form.valid || !isChecked"
+                        [ngClass]="{'enabled': contactForm.form.valid && isChecked}">Send message</button>
                 </form>
-
             </div>
         </div>
     </div>

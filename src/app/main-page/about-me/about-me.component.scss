@@ -82,9 +82,9 @@
 
 
 .about_me_image {
+    position: relative;
     @include size($w: 643px, $h: 643px);
     align-self: flex-end;
-
 
     img {
         height: 623px;

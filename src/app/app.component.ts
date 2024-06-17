@@ -5,8 +5,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MenuService } from './services/menu.service';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 
 
@@ -21,7 +20,6 @@ export class AppComponent {
   title = 'portfolio';
 
   constructor(public menuService: MenuService) {
-    AOS.init();
   }
 
 }
