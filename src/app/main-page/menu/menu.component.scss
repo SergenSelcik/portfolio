@@ -154,24 +154,26 @@
     }
 }
 
+
 .mail_n_icons_container {
     @include dFlex($jc: space-between, $ai: center);
     @include size($w: 100%, $h: 40px);
     position: relative;
 
-    >span {
+    >a {
         @include position($pos: absolute, $top: auto, $left: 0, $bottom: 0, $right: auto);
         @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #FFFCF3);
         @include dFlex($ai: center);
         height: 40px;
-        cursor: default;
+        cursor: pointer;
+        text-decoration: none;
     }
 }
 
 .icons {
     @include position($pos: absolute, $top: auto, $left: auto, $bottom: 15px, $right: 40px);
     @include dFlex($jc: space-between, $ai: center);
-    width: 204px;
+    width: 200px;
 
     img {
         width: 30px;

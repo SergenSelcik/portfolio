@@ -49,32 +49,35 @@
         width: 100%;
     }
 
-    .button_container button {
-        @include dFlex($jc: center, $ai: center);
-        @include size($w: 258px, $h: 85px);
-        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #000000);
-        background-color: #FFFCF3;
-        border: 4px solid black;
-        padding: 20px 60px 20px 60px;
-        transition: all 125ms ease;
-        cursor: pointer;
+    .button_container {
 
         a {
             text-decoration: none;
-            color: black;
-        }
 
-        &:hover {
-            width: 318px;
-            @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
-        }
+            button {
+                @include dFlex($jc: center, $ai: center);
+                @include size($w: 258px, $h: 85px);
+                @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #000000);
+                background-color: #FFFCF3;
+                border: 4px solid black;
+                padding: 20px 60px 20px 60px;
+                transition: all 125ms ease;
+                cursor: pointer;
+                text-decoration: none;
 
-        &:active {
-            background-color: #000000;
-            color: #FFFCF3;
+                &:hover {
+                    width: 318px;
+                    @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
+                }
 
-            a {
-                color: white;
+                &:active {
+                    background-color: #000000;
+                    color: #FFFCF3;
+
+                    a {
+                        color: white;
+                    }
+                }
             }
         }
     }

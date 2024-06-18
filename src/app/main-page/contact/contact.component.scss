@@ -4,7 +4,7 @@
 .bg_style {
     @include position($pos: relative, $top: auto, $left: auto, $bottom: 0px, $right: auto);
     width: 100%;
-    min-height: 1150px;
+    min-height: 1100px;
     max-height: 700px;
     z-index: 1;
 
@@ -295,8 +295,6 @@ button {
     padding: 20px 60px 20px 60px;
     transition: all 125ms ease;
     cursor: pointer;
-
-
 }
 
 .enabled {
@@ -315,5 +313,37 @@ button {
     }
     to {
         opacity: 1;
+    }
+}
+
+.arrow_up_container {
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+    @include dFlex($jc: center, $ai: center);
+    @include size($w: 48px, $h: 100px);
+    flex-direction: column;
+    gap: 15px;
+
+    > img {
+        @include position($pos: relative, $top: auto, $left: auto, $bottom: auto, $right: 0);
+        height: 80px;
+        width: 48px;
+        cursor: pointer;
+        animation: bounce 1s infinite;
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    }
+
+    span {
+        @include position($pos: relative, $top: auto, $left: auto, $bottom: auto, $right: 0);
+        @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
+        text-align: center;
+        width: 48px;
     }
 }

@@ -1,7 +1,7 @@
 <div class="bg_style" [class.margin_right]="isMenuRoute || isImprintRoute">
   <div class="max_width">
     <div class="header">
-      <img (click)="scrollToTop()" class="logo" src="./assets/img/logo.png" alt="">
+      <img (click)="navigateToHome(); scrollToTop()" class="logo" src="./assets/img/logo.png" alt="">
       <img [src]="currentImage" class="burger_menu" (click)="animateBurgerMenu()" alt="burger menu">
     </div>
   </div>

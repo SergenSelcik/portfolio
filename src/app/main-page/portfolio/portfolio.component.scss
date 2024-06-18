@@ -25,8 +25,14 @@
     cursor: default;
     margin: 80px;
 
+
     >h1 {
         @include fontStyle($ff: 'Syne', $fs: 104px, $fw: 800, $lh: 104px, $c: #000000);
+        transition: all 125ms ease;
+
+        &:hover {
+            color: #FF9900;
+        }
     }
 
     >span {

@@ -13,4 +13,14 @@ export class FooterComponent {
   get isImprintRoute(): boolean {
     return this.router.url === '/imprint';
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+    history.pushState(null, '', window.location.pathname);
+  }
+
+  navigateToHome() {
+    this.router.navigateByUrl('/');
+  }
+
 }

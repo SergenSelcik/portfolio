@@ -86,5 +86,13 @@ export class HeaderComponent {
 
   scrollToTop() {
     window.scrollTo(0, 0);
+    history.pushState(null, '', window.location.pathname);
+  }
+
+  navigateToHome() {
+    this.stage = 0;
+    this.isReversed = false;
+    this.currentImage = this.images[this.stage];
+    this.router.navigateByUrl('/');
   }
 }

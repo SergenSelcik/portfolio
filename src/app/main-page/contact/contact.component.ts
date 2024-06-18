@@ -16,7 +16,7 @@ export class ContactComponent {
   constructor(private router: Router) { }
   isChecked: boolean = false;
   http = inject(HttpClient);
-  mailTest = true;
+  mailTest = false;
   attemptedSubmit: boolean = false;
 
   toggleCheckbox() {
@@ -35,7 +35,7 @@ export class ContactComponent {
 
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://sergen-selcik.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -70,5 +70,10 @@ export class ContactComponent {
     this.contactData.email = '';
     this.contactData.message = '';
     this.isChecked = false;
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+    history.pushState(null, '', window.location.pathname);
   }
 }
