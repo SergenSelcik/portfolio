@@ -17,7 +17,7 @@
                 <a href="#contact" class="email">contact&#64;sergen-selcik.com</a>
             </div>
             <div class="scroll_container">
-                <div class="arrow_container">
+                <div (click)="scrollToBottom()" class="arrow_container">
                     @for (i of arrows; track $index){
                     <img [src]="getArrowSrc(i)" [id]="'arrow_' + i" alt="an arrow flying downward">
                     }

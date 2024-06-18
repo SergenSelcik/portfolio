@@ -102,6 +102,7 @@
             @include position($pos: absolute, $top: 0px, $left: 0px, $bottom: auto, $right: auto);
             opacity: 0;
             transition: opacity 0.3s ease-in;
+            cursor: pointer;
 
             &:nth-child(3) {
                 animation: arrowAnimation 2s ease-in-out infinite;

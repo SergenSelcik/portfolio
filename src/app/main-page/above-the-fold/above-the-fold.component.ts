@@ -14,4 +14,8 @@ export class AboveTheFoldComponent {
   getArrowSrc(index: number): string {
     return `./assets/img/arrow_${index}.png`;
   }
+
+  scrollToBottom(): void {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
 }
