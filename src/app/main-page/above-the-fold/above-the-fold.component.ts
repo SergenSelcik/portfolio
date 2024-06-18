@@ -15,7 +15,14 @@ export class AboveTheFoldComponent {
     return `./assets/img/arrow_${index}.png`;
   }
 
-  scrollToBottom(): void {
-    window.scrollTo(0, document.body.scrollHeight);
+  scrollToAboutMeSection(): void {
+    const aboutMeElement = document.getElementById('about-me');
+    if (aboutMeElement) {
+      const aboutMePosition = aboutMeElement.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: aboutMePosition,
+        behavior: 'smooth'
+      });
+    }
   }
 }

@@ -31,6 +31,7 @@ export class HeaderComponent {
   isReversed: boolean = false;
   currentImage: string = this.images[this.stage];
   isAnimating: boolean = false;
+  currentPath: string = '/';
 
   constructor(public menuService: MenuService, private router: Router) { }
 
@@ -70,8 +71,9 @@ export class HeaderComponent {
 
   toggleMenuRoute() {
     if (this.router.url === '/menu') {
-      this.router.navigate(['/']);
+      this.router.navigate([this.currentPath]);
     } else {
+      this.currentPath = this.router.url;
       this.router.navigate(['/menu']);
     }
   }
