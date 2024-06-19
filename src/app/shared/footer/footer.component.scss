@@ -76,6 +76,10 @@
     position: relative;
     transition: all 125ms ease;
 
+    &.german {
+        width: 100px;
+    }
+
     &:hover {
         cursor: pointer;
         @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 700, $lh: 23.2px, $c: #FFFCF3);
@@ -104,7 +108,7 @@
 
     &.german {
         &:hover:before {
-            left: 39px;
+            left: 37px;
         }
     }
 }
