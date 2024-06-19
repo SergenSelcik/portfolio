@@ -1,23 +1,23 @@
 <div class="bg_style">
     <div class="max_width">
         <div class="h1_container">
-            <div class="box_size">
+            <div class="box_size" [ngClass]="{ 'german': isGerman() }">
                 <img class="nav_line_0" src="./assets/img/nav_line_0.png" alt="">
                 <img class="nav_line_1" src="./assets/img/nav_line_1.png" alt="">
                 <img class="nav_line_2" src="./assets/img/nav_line_2.png" alt="">
                 <a href="#about-me">
-                    <h1>About me</h1>
+                    <h1>{{ 'About me' | translate }}</h1>
                 </a>
             </div>
-            <div class="box_size">
+            <div class="box_size" [ngClass]="{ 'german': isGerman() }">
                 <img class="nav_line_0" src="./assets/img/nav_line_0.png" alt="">
                 <img class="nav_line_1" src="./assets/img/nav_line_1.png" alt="">
                 <img class="nav_line_2" src="./assets/img/nav_line_2.png" alt="">
                 <a href="#my-skills">
-                    <h1>My skills</h1>
+                    <h1>{{ 'My skills' | translate }}</h1>
                 </a>
             </div>
-            <div class="box_size">
+            <div class="box_size" [ngClass]="{ 'german': isGerman() }">
                 <img class="nav_line_0" src="./assets/img/nav_line_0.png" alt="">
                 <img class="nav_line_1" src="./assets/img/nav_line_1.png" alt="">
                 <img class="nav_line_2" src="./assets/img/nav_line_2.png" alt="">
@@ -28,7 +28,7 @@
         </div>
         <div class="nav_footer_container">
             <div class="nav_footer_text">
-                <a href="#contact">Contact me</a>
+                <a [ngClass]="{ 'german': isGerman() }" href="#contact">{{ 'Contact me' | translate }}</a>
             </div>
             <div class="mail_n_icons_container">
                 <a href="mailto:contact@sergen-selcik.com">

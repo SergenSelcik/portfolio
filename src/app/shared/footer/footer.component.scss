@@ -101,6 +101,12 @@
         transform: scaleX(1);
         transform-origin: bottom left;
     }
+
+    &.german {
+        &:hover:before {
+            left: 39px;
+        }
+    }
 }
 
 .margin_right {

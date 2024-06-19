@@ -19,7 +19,7 @@
 .portfolio_container {
     @include dFlex($jc: center, $ai: center);
     height: 300px;
-    width: 700px;
+    width: 800px;
     flex-direction: column;
     gap: 40px;
     cursor: default;

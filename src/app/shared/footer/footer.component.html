@@ -18,8 +18,8 @@
                         <img src="./assets/img/linkedin.png" alt="linkedin icon">
                     </a>
                 </div>
-                <a routerLink="/imprint" class="legal_notice">
-                    Legal notice
+                <a [ngClass]="{ 'german': isGerman() }" routerLink="/imprint" class="legal_notice">
+                    {{ 'Legal notice' | translate }}
                 </a>
             </div>
         </div>

@@ -2,16 +2,16 @@
     <img src="./assets/img/contact_bottom.png" alt="a black background image with a diagonal line on the top">
     <div class="max_width">
         <div class="contact_content">
-            <span>Get in touch!</span>
+            <span [ngClass]="{ 'german': isGerman() }"> {{ 'Get in touch!' | translate }}</span>
             <div class="form_content">
-                <span>Ready to start a new project?</span>
-                <span>Let's discuss it and create something great.</span>
+                <span>{{ 'Ready to start a new project?' | translate }}</span>
+                <span>{{ 'Let\'s discuss it and create something great.' | translate }}</span>
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="input_container">
                         <input #name="ngModel" [(ngModel)]="contactData.name" pattern="[a-zA-Z0-9 ]*" name="name"
                             maxlength="50" id="name" type="text" required>
-                        <label [class.label]="contactData.name.length > 0" for="name">Your
-                            name</label>
+                        <label [class.label]="contactData.name.length > 0" for="name">{{'Your name' |
+                            translate}}</label>
                         @if (name.valid && name.value && name.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
@@ -20,15 +20,15 @@
                         }
                         }
                         @if (name.invalid && name.touched && !name.disabled) {
-                        <span class="error">Your name is required.</span>
+                        <span class="error">{{'Your name is required.' | translate}}</span>
                         }
                     </div>
                     <div class="input_container">
                         <input #email="ngModel" [(ngModel)]="contactData.email"
                             pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" name="email" maxlength="50"
                             id="email" type="email" required>
-                        <label [class.label]="contactData.email.length > 0" for="email">Your
-                            email</label>
+                        <label [class.label]="contactData.email.length > 0" for="email"> {{'Your email' |
+                            translate}}</label>
                         @if (email.valid && email.value && email.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
@@ -37,14 +37,14 @@
                         }
                         }
                         @if (email.invalid && email.touched && !email.disabled) {
-                        <span class="error">Your email is required.</span>
+                        <span class="error">{{'Your email is required.' | translate}}</span>
                         }
                     </div>
                     <div class="textarea_container">
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
                             cols="30" rows="10" maxlength="612" required></textarea>
-                        <label [class.label]="contactData.message.length > 0" for="message">Your
-                            message</label>
+                        <label [class.label]="contactData.message.length > 0" for="message">{{ 'Your message' |
+                            translate }} </label>
                         @if (message.valid && message.value && message.value.length > 0) {
                         <div class="valid_container valid_img"></div>
                         } @else {
@@ -53,7 +53,7 @@
                         }
                         }
                         @if (message.invalid && message.touched && !message.disabled) {
-                        <span class="error">Your message is empty.</span>
+                        <span class="error">{{ 'Your message is empty.' | translate }}</span>
                         }
                     </div>
                     <div class="privacy_policy_container">
@@ -63,26 +63,26 @@
                                 (click)="toggleCheckbox()">
                             </div>
                             <div class="privacy_policy_text_container">
-                                <div class="privacy_policy_text">
-                                    <span>I've read the </span><a (click)="scrollToTop()" routerLink="/privacy-policy">privacy
-                                        policy</a>
-                                    <span>and agree to the processing of my data as outlined.</span>
+                                <div [ngClass]="{ 'german': isGerman() }" class="privacy_policy_text">
+                                    <span [ngClass]="{ 'german': isGerman() }"> {{ 'Ive read the' | translate }}</span><a [ngClass]="{ 'german': isGerman() }" (click)="scrollToTop()"
+                                        routerLink="/privacy-policy"> {{ 'privacy policy' | translate }}</a>
+                                    <span [ngClass]="{ 'german': isGerman() }"> {{ 'and agree to the processing of my data as outlined.' | translate }}</span>
                                 </div>
                             </div>
                         </div>
                         @if (contactForm.submitted && !isChecked){
-                        <span class="error">Please accept the privacy policy.</span>
+                        <span class="error">{{ 'Please accept the privacy policy.' | translate }}</span>
                         }
                     </div>
-                    <button type="submit" [disabled]="!contactForm.form.valid"
-                        [ngClass]="{'enabled': contactForm.form.valid && isChecked}">Send message</button>
+                    <button [ngClass]="{ 'german': isGerman() }" type="submit" [disabled]="!contactForm.form.valid"
+                        [ngClass]="{'enabled': contactForm.form.valid && isChecked}">{{ 'Send message' | translate }}</button>
                 </form>
             </div>
 
         </div>
         <div class="arrow_up_container">
             <img (click)="scrollToTop()" src="./assets/img/arrow_up.png" alt="an arrow going up">
-            <span>Up</span>
+            <span>{{ 'Back to top' | translate }}</span>
         </div>
     </div>
 </div>

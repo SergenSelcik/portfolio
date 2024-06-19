@@ -24,7 +24,7 @@
 .about_me_text_container {
     @include position($pos: relative, $top: 200px, $left: 0, $bottom: auto, $right: auto);
     @include dFlex($jc: center, $ai: start);
-    @include size($w: 819px, $h: 554px);
+    @include size($w: 870px, $h: 554px);
     flex-direction: column;
     gap: 52px;
 

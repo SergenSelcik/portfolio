@@ -36,6 +36,11 @@
         z-index: 1;
         cursor: default;
 
+        &.german{
+            @include fontStyle($ff: 'Syne', $fs: 58px, $fw: 800, $lh: 58px, $c: #FFFCF3);
+            white-space: nowrap;
+        }
+
         &:hover {
             color: #FF9900;
         }
@@ -222,7 +227,7 @@ form {
 }
 
 .privacy_policy_text_container {
-    @include size($w: 100%, $h: 100%);
+    @include size($w: 100%, $h: 60px);
     @include dFlex($jc: center, $ai: center);
 
     .privacy_policy_text {
@@ -231,12 +236,22 @@ form {
         width: 100%;
         text-align: center;
 
+        &.german{
+            display: block;
+            margin-top: 15px;
+        }
+
         a {
             @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FF9900);
             text-decoration: none;
             display: inline-block;
             width: 140px;
             transition: all 250ms ease;
+
+            &.german {
+                width: 190px;
+                margin-left: 5px;
+            }
 
             &:hover {
                 transform: translateY(-1px) scale(1.05);
@@ -295,6 +310,10 @@ button {
     padding: 20px 60px 20px 60px;
     transition: all 125ms ease;
     cursor: pointer;
+
+    &.german{
+        padding: 20px 45px 20px 45px;
+    }
 }
 
 .enabled {
@@ -341,9 +360,7 @@ button {
     }
 
     span {
-        @include position($pos: relative, $top: auto, $left: auto, $bottom: auto, $right: 0);
         @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
         text-align: center;
-        width: 48px;
     }
 }

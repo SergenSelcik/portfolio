@@ -31,6 +31,7 @@
     h1 {
         @include fontStyle($ff: 'Syne', $fs: 120px, $fw: 700, $lh: 120px, $c: #000000);
         letter-spacing: -2.5px;
+        white-space: nowrap;
     }
 }
 
@@ -45,9 +46,13 @@
 }
 
 .box_size {
-    @include size($w: 750px, $h: 250px);
     @include dFlex($jc: center, $ai: center);
+    @include size($w: 750px, $h: 250px);
     position: relative;
+
+    &.german {
+        width: 850px;
+    }
 
     a {
         text-decoration: none;
@@ -137,7 +142,8 @@
     gap: 10px;
 
     .nav_footer_text {
-        @include size($w: 660px, $h: 80px);
+        @include size($w: 100%, $h: 80px);
+        @include dFlex($jc: start, $ai: center);
         position: relative;
 
         >a {
@@ -147,9 +153,15 @@
             cursor: pointer;
             text-decoration: none;
 
+            &.german {
+                @include fontStyle($ff: 'Syne', $fs: 48px, $fw: 800, $lh: 48px, $c: #FFFCF3);
+            }
+
             &:hover {
                 color: #FF9900;
             }
+
+
         }
     }
 }

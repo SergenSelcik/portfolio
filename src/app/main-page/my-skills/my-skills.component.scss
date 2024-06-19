@@ -35,12 +35,20 @@
         transform: translateX(-50%);
     }
 
+    &.german::before {
+        width: 970px;
+    }
+
     h1 {
         @include position($pos: absolute, $top: 0, $left: 50%, $bottom: auto, $right: auto);
         @include fontStyle($ff: 'Syne', $fs: 98px, $fw: 800, $lh: 98px, $c: #000000);
         transform: translate(-50%, -50%);
         transition: all 125ms ease;
         cursor: default;
+
+        &.german {
+            white-space: nowrap;
+        }
 
         &:hover {
             color: #FF9900;

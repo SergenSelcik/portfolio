@@ -14,7 +14,7 @@
         <div class="project_content">
             <h1>{{ project.name }}</h1>
             <span class="technologies">{{ project.technologies }}</span>
-            <span class="description">{{ project.description }}</span>
+            <span class="description">{{ project.description | translate}}</span>
             <a target="_blank" href="{{ project.github }}">Github</a>
         </div>
     </div>
