@@ -1,42 +1,42 @@
 {
-    "Developer": "Entwickler",
-    "Scroll down": "Scrollen Sie runter",
-    "About me": "Über mich",
-    "My skills": "Meine Skills",
-    "Contact me": "Kontaktieren Sie mich",
-    "I am a Frontend Developer based in Wülfrath, Germany, passionate about transforming designers' and companies' ideas into reality. I am eager to advance my career with a position as a Junior Web Developer": "Ich bin ein Frontend-Entwickler aus Wülfrath nähe Düsseldorf, der leidenschaftlich daran arbeitet, die Ideen von Designern und Unternehmen in die Realität umzusetzen. Ich strebe danach, meine Karriere als Junior Webentwickler voranzutreiben.",
-    "If you believe I would be a suitable fit for your projects, contact me!": "Wenn Sie der Meinung sind, dass Sie mich für Ihre Projekte benötigen, kontaktieren Sie mich!",
-    "Let's talk": "Kontakt",
-    "Explore a selection of my work here - Engage with them to witness my expertise firsthand.": "Schauen Sie sich hier eine Auswahl meiner Arbeiten an - Interagieren Sie mit den Projekten, um einen direkten Einblick in meine Fachkenntnis zu gewinnen.",
-    "projects": {
-      "Join": {
-        "description": "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu."
-      },
-      "Magic Run: Orc Invasion": {
-        "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Melandis, dem Blitzmagier, Edelsteine und Mana-Tränke zu finden, um gegen den grausamen Kriegsherrn Kragg zu kämpfen."
-      },
-      "Pokédex": {
-        "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
-      }
+  "Developer": "Entwickler",
+  "Scroll down": "Scrollen Sie runter",
+  "About me": "Über mich",
+  "My skills": "Meine Skills",
+  "Contact me": "Kontaktieren Sie mich",
+  "I am a Frontend Developer based in Wülfrath, Germany, passionate about transforming designers' and companies' ideas into reality. I am eager to advance my career with a position as a Junior Web Developer": "Ich bin ein Frontend-Entwickler aus Wülfrath nähe Düsseldorf, der leidenschaftlich daran arbeitet, die Ideen von Designern und Unternehmen in die Realität umzusetzen. Ich strebe danach, meine Karriere als Junior Webentwickler voranzutreiben.",
+  "If you believe I would be a suitable fit for your projects, contact me!": "Wenn Sie der Meinung sind, dass Sie mich für Ihre Projekte benötigen, kontaktieren Sie mich!",
+  "Let's talk": "Kontakt",
+  "Explore a selection of my work here - Engage with them to witness my expertise firsthand.": "Schauen Sie sich hier eine Auswahl meiner Arbeiten an - Interagieren Sie mit den Projekten, um einen direkten Einblick in meine Fachkenntnis zu gewinnen.",
+  "projects": {
+    "Join": {
+      "description": "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer und Kategorien zu."
     },
-    "Get in touch!": "Kontaktieren Sie mich!",
-    "Ready to start a new project?": "Bereit für ein neues Projekt?",
-    "Let's discuss it and create something great.": "Lassen Sie uns ins Gespräch kommen und etwas Großartiges schaffen.",
-    "Your name": "Ihr Name",
-    "Your name is required.": "Ihr Name ist erforderlich.",
-    "Your email": "Ihre E-Mail",
-    "Your email is required.": "Ihre E-Mail ist erforderlich.",
-    "Your message": "Ihre Nachricht",
-    "Your message is empty.": "Ihre Nachricht ist leer.",
-    "Ive read the": "Ich habe die",
-    "privacy policy": "Datenschutzrichtlinie",
-    "and agree to the processing of my data as outlined.": "gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
-    "Please accept the privacy policy.": "Bitte akzeptieren Sie die Datenschutzrichtlinie.",
-    "Send message": "Nachricht senden",
-    "Back to top": "Zurück nach oben",
-    "Legal notice": "Impressum",
-    "Imprint": "Impressum",
-    "Contact": "Kontakt",
-    "Phone": "Telefon",
-    "Source": "Quelle"
-  }
+    "Magic Run: Orc Invasion": {
+      "description": "Ein einfaches Jump-and-Run-Spiel basierend auf einem objektorientierten Ansatz. Helfen Sie Melandis, dem Blitzmagier, Edelsteine und Mana-Tränke zu finden, um gegen den grausamen Kriegsherrn Kragg zu kämpfen."
+    },
+    "Pokédex": {
+      "description": "Basierend auf der PokéAPI, eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    }
+  },
+  "Get in touch!": "Kontaktieren Sie mich!",
+  "Ready to start a new project?": "Bereit für ein neues Projekt?",
+  "Let's discuss it and create something great.": "Lassen Sie uns ins Gespräch kommen und etwas Großartiges schaffen.",
+  "Your name": "Ihr Name",
+  "Your name is required.": "Ihr Name ist erforderlich.",
+  "Your email": "Ihre E-Mail",
+  "Your email is required.": "Ihre E-Mail ist erforderlich.",
+  "Your message": "Ihre Nachricht",
+  "Your message is empty.": "Ihre Nachricht ist leer.",
+  "Ive read the": "Ich habe die",
+  "privacy policy": "Datenschutzrichtlinie",
+  "and agree to the processing of my data as outlined.": "gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
+  "Please accept the privacy policy.": "Bitte akzeptieren Sie die Datenschutzrichtlinie.",
+  "Send message": "Nachricht senden",
+  "Back to top": "Zurück nach oben",
+  "Legal notice": "Impressum",
+  "Imprint": "Impressum",
+  "Contact": "Kontakt",
+  "Phone": "Telefon",
+  "Source": "Quelle"
+}

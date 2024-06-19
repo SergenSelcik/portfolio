@@ -60,13 +60,11 @@
         height: 450px;
     }
 
-
     >img {
         height: 450px;
         transition: filter 250ms ease;
         filter: brightness(80%);
         cursor: pointer;
-
     }
 
     .border {

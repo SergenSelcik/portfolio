@@ -5,7 +5,7 @@ import { SkillService } from '../../../services/skill.service';
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, ],
+  imports: [CommonModule,],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })

@@ -12,14 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-projects = inject(ProjectsService).projects;
-translate = inject(TranslationService);
-
-isEnglish(): boolean {
-  return this.translate.getCurrentLanguage() === 'en';
-}
-
-isGerman(): boolean {
-  return this.translate.getCurrentLanguage() === 'de';
-}
+  projects = inject(ProjectsService).projects;
+  translate = inject(TranslationService);
 }

@@ -20,8 +20,4 @@ export class PortfolioComponent {
       this.firstHover = false;
     }
   }
-
-  isGerman(): boolean {
-    return this.translate.getCurrentLanguage() === 'de';
-  }
 }

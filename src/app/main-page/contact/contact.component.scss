@@ -36,7 +36,7 @@
         z-index: 1;
         cursor: default;
 
-        &.german{
+        &.german {
             @include fontStyle($ff: 'Syne', $fs: 58px, $fw: 800, $lh: 58px, $c: #FFFCF3);
             white-space: nowrap;
         }
@@ -236,7 +236,7 @@ form {
         width: 100%;
         text-align: center;
 
-        &.german{
+        &.german {
             display: block;
             margin-top: 15px;
         }
@@ -311,7 +311,7 @@ button {
     transition: all 125ms ease;
     cursor: pointer;
 
-    &.german{
+    &.german {
         padding: 20px 45px 20px 45px;
     }
 }
@@ -330,6 +330,7 @@ button {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -342,7 +343,7 @@ button {
     flex-direction: column;
     gap: 15px;
 
-    > img {
+    >img {
         @include position($pos: relative, $top: auto, $left: auto, $bottom: auto, $right: 0);
         height: 80px;
         width: 48px;
@@ -350,9 +351,11 @@ button {
         animation: bounce 1s infinite;
 
         @keyframes bounce {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-20px);
             }

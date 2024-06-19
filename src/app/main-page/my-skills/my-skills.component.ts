@@ -21,10 +21,6 @@ export class MySkillsComponent {
     }
   }
 
-  isEnglish(): boolean {
-    return this.translate.getCurrentLanguage() === 'en';
-  }
-
   isGerman(): boolean {
     return this.translate.getCurrentLanguage() === 'de';
   }

@@ -1,13 +1,13 @@
 {
-    "projects": {
-        "Join": {
-          "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
-        },
-        "Magic Run: Orc Invasion": {
-          "description": "A simple Jump-and-Run game based on object-oriented approach. Help Melandis the lighting wizard to find gems and mana-potions for his fight against the cruel warlord Kragg."
-        },
-        "Pokédex": {
-          "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
-        }
-      }
+  "projects": {
+    "Join": {
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "Magic Run: Orc Invasion": {
+      "description": "A simple Jump-and-Run game based on object-oriented approach. Help Melandis the lighting wizard to find gems and mana-potions for his fight against the cruel warlord Kragg."
+    },
+    "Pokédex": {
+      "description": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+    }
+  }
 }
