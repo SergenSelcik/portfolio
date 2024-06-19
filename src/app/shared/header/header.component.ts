@@ -66,7 +66,7 @@ export class HeaderComponent {
       } else {
         this.currentImage = currentImages[this.stage];
       }
-    }, 25);
+    }, 40);
   }
 
   toggleMenuRoute() {
