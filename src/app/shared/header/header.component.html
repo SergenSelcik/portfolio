@@ -2,7 +2,14 @@
   <div class="max_width">
     <div class="header">
       <img (click)="navigateToHome(); scrollToTop()" class="logo" src="./assets/img/logo.png" alt="">
-      <img [src]="currentImage" class="burger_menu" (click)="animateBurgerMenu()" alt="burger menu">
+      <div class="language_menu_container">
+        <div class="language">
+          <p (click)="translate.switchLanguage('en')" [class.selected]="translate.getCurrentLanguage() === 'en'">EN</p>
+          <p>|</p>
+          <p (click)="translate.switchLanguage('de')" [class.selected]="translate.getCurrentLanguage() === 'de'">DE</p>
+      </div>
+        <img [src]="currentImage" class="burger_menu" (click)="animateBurgerMenu()" alt="burger menu">
+      </div>
     </div>
   </div>
 </div>

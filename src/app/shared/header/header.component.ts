@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AboveTheFoldComponent } from '../../main-page/above-the-fold/above-the-fold.component';
 import { Router, RouterLink } from '@angular/router';
 import { MenuComponent } from '../../main-page/menu/menu.component';
 import { MenuService } from '../../services/menu.service';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-header',
@@ -32,6 +33,8 @@ export class HeaderComponent {
   currentImage: string = this.images[this.stage];
   isAnimating: boolean = false;
   currentPath: string = '/';
+  currentLanguage: string = 'en';
+  translate = inject(TranslationService);
 
   constructor(public menuService: MenuService, private router: Router) { }
 

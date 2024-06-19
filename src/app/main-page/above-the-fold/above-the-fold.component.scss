@@ -34,26 +34,25 @@
     .h1_line_n_name_container {
         @include dFlex($jc: center, $ai: center);
         @include size($w: 100%, $h: 90px);
-        gap: -10px;
         opacity: 0;
         animation: fadeIn 250ms ease-in-out forwards;
 
         .h1_line {
-            @include position($pos: absolute, $top: auto, $left: 75px, $bottom: 90px, $right: auto);
             @include size($w: 788px, $h: 3px);
             background-color: #000000;
+            margin-top: 10px;
         }
 
         .name_container {
             @include dFlex($jc: center, $ai: center);
-            width: 353px;
-            height: 100%;
+            position: relative;
+            width: 360px;
 
             h2 {
-                @include position($pos: absolute, $top: auto, $left: auto, $bottom: 55px, $right: 50px);
                 @include fontStyle($ff: 'Overpass', $fs: 55px, $fw: 700, $lh: unset, $c: #FF9900);
                 letter-spacing: -1.5px;
                 cursor: default;
+                margin-top: 20px;
             }
         }
     }
@@ -111,9 +110,10 @@
     }
 
     .scroll_text {
-        @include size($w: 60px, $h: 40px);
+        @include size($w: 100%, $h: 40px);
         background-color: #FFFCF3;
         z-index: 5;
+        text-align: center;
 
         span {
             @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #000000);

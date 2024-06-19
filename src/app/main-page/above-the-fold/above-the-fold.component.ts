@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent {
   arrows = [0, 1, 2, 3, 4];
+  translate = inject(TranslationService);
 
   getArrowSrc(index: number): string {
     return `./assets/img/arrow_${index}.png`;
