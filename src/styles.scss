@@ -28,6 +28,18 @@ body {
     scroll-behavior: smooth;
 }
 
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px rgb(0, 0, 0) inset;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px rgb(0, 0, 0) inset;
+}
+
 @mixin dFlex($jc: center, $ai: center) {
     display: flex;
     justify-content: $jc;
