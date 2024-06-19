@@ -4,7 +4,7 @@
 .bg_style {
     @include position($pos: relative, $top: auto, $left: auto, $bottom: 0px, $right: auto);
     width: 100%;
-    min-height: 1100px;
+    min-height: 1150px;
     max-height: 700px;
     z-index: 1;
 
@@ -317,7 +317,7 @@ button {
 }
 
 .arrow_up_container {
-    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 0);
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 5px, $right: 0);
     @include dFlex($jc: center, $ai: center);
     @include size($w: 48px, $h: 100px);
     flex-direction: column;
