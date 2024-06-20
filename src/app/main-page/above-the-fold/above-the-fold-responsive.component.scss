@@ -1,6 +1,6 @@
 @import '../../../styles.scss';
 
-@media (max-width: 1460px) {
+@media (max-width: 1330px) {
     .h1_container {
         h1 {
             @include fontStyle($ff: 'Syne', $fs: 118px, $fw: 800, $lh: 118px, $c: #000000);
@@ -10,14 +10,193 @@
             @include size($w: 100%, $h: 60px);
 
             .h1_line {
-                @include size($w: 488px, $h: 3px);
+                @include size($w: 588px, $h: 3px);
             }
 
             .name_container {
                 width: 300px;
-                h2{
+
+                h2 {
                     @include fontStyle($ff: 'Overpass', $fs: 45px, $fw: 700, $lh: unset, $c: #FF9900);
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .h1_container {
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 94px, $fw: 800, $lh: 94px, $c: #000000);
+        }
+
+        .h1_line_n_name_container {
+            @include size($w: 100%, $h: 50px);
+
+            .h1_line {
+                @include size($w: 458px, $h: 3px);
+            }
+
+            .name_container {
+                width: 230px;
+
+                h2 {
+                    @include fontStyle($ff: 'Overpass', $fs: 35px, $fw: 700, $lh: unset, $c: #FF9900);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    .h1_container {
+        height: 300px;
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 70px, $fw: 800, $lh: 70px, $c: #000000);
+        }
+
+        .h1_line_n_name_container {
+            @include size($w: 100%, $h: 30px);
+
+            .h1_line {
+                @include size($w: 338px, $h: 2px);
+            }
+
+            .name_container {
+                width: 180px;
+
+                h2 {
+                    @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: unset, $c: #FF9900);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .email_container {
+        a {
+            font-size: 19px;
+        }
+    }
+
+    .scroll_container {
+        height: 190px;
+
+        .arrow_container {
+            height: 150px;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .scroll_text {
+            span {
+                @include fontStyle($ff: 'Overpass', $fs: 19px, $fw: 300, $lh: 19px, $c: #000000);
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .h1_container {
+        height: 200px;
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 46px, $fw: 800, $lh: 46px, $c: #000000);
+        }
+
+        .h1_line_n_name_container {
+            @include size($w: 100%, $h: 20px);
+
+            .h1_line {
+                @include size($w: 210px, $h: 2px);
+            }
+
+            .name_container {
+                width: 120px;
+
+                h2 {
+                    @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 700, $lh: unset, $c: #FF9900);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .email_container {
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .scroll_container {
+        height: 190px;
+
+        .arrow_container {
+            height: 150px;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .scroll_text {
+            span {
+                @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 18px, $c: #000000);
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .h1_container {
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 39px, $fw: 800, $lh: 39px, $c: #000000);
+        }
+
+        .h1_line_n_name_container {
+            @include size($w: 100%, $h: 17px);
+
+            .h1_line {
+                @include size($w: 190px, $h: 1px);
+            }
+
+            .name_container {
+                width: 95px;
+
+                h2 {
+                    @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 700, $lh: unset, $c: #FF9900);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .email_container {
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .scroll_container {
+        height: 190px;
+        width: 90px;
+
+        .arrow_container {
+            height: 150px;
+
+            img {
+                width: 80px;
+            }
+        }
+
+        .scroll_text {
+            span {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 300, $lh: 16px, $c: #000000);
             }
         }
     }

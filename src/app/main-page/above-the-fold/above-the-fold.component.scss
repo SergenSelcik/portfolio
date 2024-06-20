@@ -72,12 +72,10 @@
 
 .email_container {
     @include position($pos: absolute, $top: auto, $left: 50px, $bottom: 50px, $right: auto);
-    width: 100%;
     transform-origin: left bottom;
     transform: rotate(-90deg);
 
     a {
-        @include size($w: 346px, $h: 27px);
         @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #000000);
         text-decoration: none;
         cursor: pointer;
@@ -99,7 +97,6 @@
         overflow: hidden;
 
         img {
-            @include position($pos: absolute, $top: 0px, $left: 0px, $bottom: auto, $right: auto);
             opacity: 0;
             transition: opacity 0.3s ease-in;
             cursor: pointer;
