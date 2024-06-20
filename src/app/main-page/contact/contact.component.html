@@ -6,6 +6,17 @@
             <div class="form_content">
                 <span>{{ 'Ready to start a new project?' | translate }}</span>
                 <span [ngClass]="{ 'german': isGerman() }">{{ 'Let\'s discuss it and create something great.' | translate }}</span>
+                @if (showSuccessMessage) {
+                    <div data-aos="zoom-out-up" class="dialog-background" [ngClass]="{ 'fade-out': disappearanceAnimation }" class="dialog-background" data-aos="zoom-out-up">
+                        <div class="success-message-dialog">
+                            <img src="./assets/img/success.png" alt="">
+                            <span>
+                                {{ 'Thank you!' | translate }}<br>
+                                {{ 'Your message was successfully sent.' | translate }}
+                            </span>
+                        </div>
+                      </div>
+                }
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="input_container">
                         <input #name="ngModel" [(ngModel)]="contactData.name" pattern="[a-zA-Z0-9 ]*" name="name"

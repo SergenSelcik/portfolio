@@ -21,7 +21,10 @@ export class ContactComponent {
   http = inject(HttpClient);
   mailTest = false;
   attemptedSubmit: boolean = false;
+  showSuccessMessage = false;
+  disappearanceAnimation: boolean = false;
   translate = inject(TranslationService);
+
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
@@ -55,6 +58,7 @@ export class ContactComponent {
           next: (response) => {
             ngForm.resetForm();
             this.resetForm();
+            this.displaySuccessMessage();
           },
           error: (error) => {
             console.error(error);
@@ -64,6 +68,7 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && this.isChecked) {
       ngForm.resetForm();
       this.resetForm()
+      this.displaySuccessMessage();
     }
   }
 
@@ -81,5 +86,16 @@ export class ContactComponent {
 
   isGerman(): boolean {
     return this.translate.getCurrentLanguage() === 'de';
+  }
+
+  displaySuccessMessage() {
+    this.showSuccessMessage = true;
+    setTimeout(() => {
+      this.disappearanceAnimation = true;
+      setTimeout(() => {
+        this.showSuccessMessage = false;
+        this.disappearanceAnimation = false;
+      }, 500);
+    }, 2000);
   }
 }
