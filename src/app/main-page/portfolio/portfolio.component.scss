@@ -38,6 +38,10 @@
     >span {
         @include fontStyle($ff: 'Overpass', $fs: 34px, $fw: 400, $lh: 41.6px, $c: #000000);
         @include dFlex($jc: center, $ai: center);
+
+        &.german{
+            @include fontStyle($ff: 'Overpass', $fs: 33px, $fw: 400, $lh: 41.6px, $c: #000000);
+        }
     }
 }
 

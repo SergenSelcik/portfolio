@@ -5,7 +5,7 @@
             <span [ngClass]="{ 'german': isGerman() }"> {{ 'Get in touch!' | translate }}</span>
             <div class="form_content">
                 <span>{{ 'Ready to start a new project?' | translate }}</span>
-                <span>{{ 'Let\'s discuss it and create something great.' | translate }}</span>
+                <span [ngClass]="{ 'german': isGerman() }">{{ 'Let\'s discuss it and create something great.' | translate }}</span>
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div class="input_container">
                         <input #name="ngModel" [(ngModel)]="contactData.name" pattern="[a-zA-Z0-9 ]*" name="name"

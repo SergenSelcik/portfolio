@@ -59,6 +59,10 @@
 
     >span:nth-child(2) {
         @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.2px, $c: #FFFCF3);
+
+        &.german {
+            @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 400, $lh: 31px, $c: #FFFCF3);
+        }
     }
 }
 
