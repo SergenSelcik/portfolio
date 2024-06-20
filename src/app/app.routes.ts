@@ -5,8 +5,13 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-  { path: '', component: MainPageComponent },
-  { path: 'menu', component: MenuComponent },
+  {
+    path: '',
+    component: MainPageComponent,
+    children: [
+      { path: 'menu', component: MenuComponent },
+    ]
+  },
   { path: 'imprint', component: ImprintComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: '**', redirectTo: '' }

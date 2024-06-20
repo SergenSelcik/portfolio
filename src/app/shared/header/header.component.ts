@@ -74,8 +74,10 @@ export class HeaderComponent {
 
   toggleMenuRoute() {
     if (this.router.url === '/menu') {
+      document.body.style.overflow = 'auto';
       this.router.navigate([this.currentPath]);
     } else {
+      document.body.style.overflow = 'hidden';
       this.currentPath = this.router.url;
       this.router.navigate(['/menu']);
     }

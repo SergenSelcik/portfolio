@@ -29,7 +29,7 @@
 
     >span {
         @include position($pos: relative, $top: 0px, $left: 0, $bottom: auto, $right: auto);
-        @include fontStyle($ff: 'Syne', $fs: 98px, $fw: 800, $lh: 98px, $c: #FFFCF3);
+        @include fontStyle($ff: 'Syne', $fs: 90px, $fw: 800, $lh: 90px, $c: #FFFCF3);
         margin-top: 200px;
         margin-bottom: 80px;
         transition: all 125ms ease;
@@ -341,7 +341,7 @@ button {
 }
 
 .arrow_up_container {
-    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 5px, $right: 0);
+    @include position($pos: absolute, $top: auto, $left: auto, $bottom: 15px, $right: 0);
     @include dFlex($jc: center, $ai: center);
     @include size($w: 48px, $h: 100px);
     flex-direction: column;
@@ -369,5 +369,6 @@ button {
     span {
         @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
         text-align: center;
+        cursor: default;
     }
 }

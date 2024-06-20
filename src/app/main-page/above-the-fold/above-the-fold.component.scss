@@ -29,6 +29,7 @@
         @include fontStyle($ff: 'Syne', $fs: 158px, $fw: 800, $lh: 128px, $c: #000000);
         letter-spacing: -2.5px;
         cursor: default;
+        transition: all 250ms ease-in-out;
     }
 
     .h1_line_n_name_container {
