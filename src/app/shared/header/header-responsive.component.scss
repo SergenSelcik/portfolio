@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+@media (max-width: 1600px) {
+    .header {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    .header {
+        height: 100px;
+
+        .logo {
+            height: 60px !important;
+        }
+
+        .language_menu_container {
+            width: 130px;
+
+            .language {
+                width: 80px;
+                p {
+                    font-size: 20px;
+                }
+            }
+
+            .burger_menu {
+                height: 32px;
+            }
+        }
+
+
+
+
+    }
+}

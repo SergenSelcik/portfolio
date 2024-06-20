@@ -8,7 +8,10 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  styleUrls: [
+    './above-the-fold.component.scss', 
+    './above-the-fold-responsive.component.scss'
+  ]
 })
 export class AboveTheFoldComponent {
   arrows = [0, 1, 2, 3, 4];

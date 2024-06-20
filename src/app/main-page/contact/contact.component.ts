@@ -96,6 +96,6 @@ export class ContactComponent {
         this.showSuccessMessage = false;
         this.disappearanceAnimation = false;
       }, 500);
-    }, 2000);
+    }, 2500);
   }
 }

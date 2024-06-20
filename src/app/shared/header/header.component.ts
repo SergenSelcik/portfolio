@@ -10,7 +10,9 @@ import { TranslationService } from '../../services/translation.service';
   standalone: true,
   imports: [RouterLink, AboveTheFoldComponent, MenuComponent],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss',
+    './header-responsive.component.scss',
+  ]
 })
 export class HeaderComponent {
   images: string[] = [

@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+
+@media (max-width: 1460px) {
+    .h1_container {
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 118px, $fw: 800, $lh: 118px, $c: #000000);
+        }
+
+        .h1_line_n_name_container {
+            @include size($w: 100%, $h: 60px);
+
+            .h1_line {
+                @include size($w: 488px, $h: 3px);
+            }
+
+            .name_container {
+                width: 300px;
+                h2{
+                    @include fontStyle($ff: 'Overpass', $fs: 45px, $fw: 700, $lh: unset, $c: #FF9900);
+                }
+            }
+        }
+    }
+}
