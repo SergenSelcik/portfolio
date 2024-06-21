@@ -261,6 +261,7 @@
 @media (max-width: 480px) {
     .h1_container {
         @include size($w: 300px, $h: 281px);
+        top: 440px;
 
         h1 {
             @include fontStyle($ff: 'Syne', $fs: 48px, $fw: 700, $lh: 48px, $c: #000000);
