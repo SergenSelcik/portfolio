@@ -1,9 +1,8 @@
 @import '../../../styles.scss';
 
-@media (max-width: 1600px) {
+@media (max-width: 1640px) {
     .header {
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
 }
 
@@ -20,6 +19,7 @@
 
             .language {
                 width: 80px;
+
                 p {
                     font-size: 20px;
                 }
@@ -29,9 +29,5 @@
                 height: 32px;
             }
         }
-
-
-
-
     }
 }

@@ -9,7 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss',
+    './menu-responsive.component.scss',
+  ]
 })
 export class MenuComponent {
   translate = inject(TranslationService);

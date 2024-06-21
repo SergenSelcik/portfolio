@@ -34,10 +34,15 @@
     animation: fadeIn 250ms ease-in-out forwards;
     z-index: 10;
 
+    &.german {
+        width: 750px;
+    }
+
     h1 {
         @include fontStyle($ff: 'Syne', $fs: 120px, $fw: 700, $lh: 120px, $c: #000000);
         letter-spacing: -2.5px;
         white-space: nowrap;
+        transition: all 250ms ease-in-out;
     }
 }
 
@@ -166,8 +171,6 @@
             &:hover {
                 color: #FF9900;
             }
-
-
         }
     }
 }

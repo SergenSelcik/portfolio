@@ -1,0 +1,322 @@
+@import '../../../styles.scss';
+
+@media (max-width: 1640px) {
+    .nav_footer_text {
+
+        >a {
+            margin-left: 20px;
+        }
+    }
+
+    .mail_n_icons_container {
+
+        >a {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 1360px) {
+    .h1_container {
+        @include size($w: 650px, $h: 491px);
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 90px, $fw: 700, $lh: 90px, $c: #000000);
+        }
+    }
+
+    .box_size {
+        @include size($w: 650px, $h: 491px);
+
+        &.german {
+            width: 650px;
+        }
+
+        .nav_line_0 {
+            height: 44px;
+        }
+
+        .nav_line_1 {
+            height: 140px;
+        }
+
+        .nav_line_2 {
+            height: 140px;
+        }
+    }
+
+    .nav_footer_container {
+        height: 220px;
+
+        .nav_footer_text {
+            @include size($w: 100%, $h: 50px);
+
+            >a {
+                @include fontStyle($ff: 'Syne', $fs: 48px, $fw: 800, $lh: 48px, $c: #FFFCF3);
+
+                &.german {
+                    @include fontStyle($ff: 'Syne', $fs: 32px, $fw: 800, $lh: 32px, $c: #FFFCF3);
+
+                    &:hover {
+                        color: #FF9900;
+                    }
+                }
+            }
+        }
+    }
+
+    .mail_n_icons_container {
+
+        >a {
+            @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #FFFCF3);
+            height: 30px;
+        }
+    }
+
+    .icons {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 5px, $right: 40px);
+        @include dFlex($jc: space-between, $ai: center);
+        width: 170px;
+
+        img {
+            width: 26px;
+            cursor: pointer;
+            transition: all 125ms ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .box_size {
+        @include size($w: 550px, $h: 491px);
+
+        &.german {
+            width: 650px;
+        }
+
+        .nav_line_0 {
+            height: 44px;
+        }
+
+        .nav_line_1 {
+            height: 140px;
+            display: block;
+        }
+
+        .nav_line_2 {
+            height: 140px;
+            opacity: 1;
+        }
+    }
+
+    .nav_bottom_container {
+        img {
+            width: max-content;
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .h1_container {
+        @include size($w: 550px, $h: 441px);
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 74px, $fw: 700, $lh: 74px, $c: #000000);
+        }
+    }
+
+    .box_size {
+        @include size($w: 500px, $h: 491px);
+
+        &.german {
+            width: 500px;
+        }
+
+        .nav_line_0 {
+            height: 44px;
+        }
+
+        .nav_line_1 {
+            height: 140px;
+        }
+
+        .nav_line_2 {
+            height: 140px;
+        }
+    }
+
+    .nav_footer_container {
+
+        .nav_footer_text {
+            @include size($w: 100%, $h: 30px);
+
+            >a {
+                @include fontStyle($ff: 'Syne', $fs: 40px, $fw: 800, $lh: 40px, $c: #FFFCF3);
+
+                &.german {
+                    @include fontStyle($ff: 'Syne', $fs: 27px, $fw: 800, $lh: 27px, $c: #FFFCF3);
+                }
+            }
+        }
+    }
+
+    .mail_n_icons_container {
+
+        >a {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 300, $lh: 20px, $c: #FFFCF3);
+            height: 30px;
+        }
+    }
+
+    .icons {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0px, $right: 40px);
+        @include dFlex($jc: space-between, $ai: center);
+        width: 170px;
+
+        img {
+            width: 26px;
+            cursor: pointer;
+            transition: all 125ms ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .h1_container {
+        @include size($w: 420px, $h: 401px);
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 62px, $fw: 700, $lh: 62px, $c: #000000);
+        }
+    }
+
+    .box_size {
+        @include size($w: 420px, $h: 491px);
+
+        &.german {
+            width: 420px;
+        }
+
+        .nav_line_0 {
+            height: 32px;
+        }
+
+        .nav_line_1 {
+            height: 120px;
+        }
+
+        .nav_line_2 {
+            height: 120px;
+        }
+    }
+
+    .nav_footer_container {
+        height: 200px;
+        .nav_footer_text {
+            @include size($w: 100%, $h: 30px);
+
+            >a {
+                @include fontStyle($ff: 'Syne', $fs: 28px, $fw: 800, $lh: 28px, $c: #FFFCF3);
+
+                &.german {
+                    @include fontStyle($ff: 'Syne', $fs: 20px, $fw: 800, $lh: 20px, $c: #FFFCF3);
+                }
+            }
+        }
+    }
+
+    .mail_n_icons_container {
+        height: 30px;
+        >a {
+            @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 300, $lh: 16px, $c: #FFFCF3);
+            height: 30px;
+        }
+    }
+
+    .icons {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 10px, $right: 40px);
+        @include dFlex($jc: space-between, $ai: center);
+        width: 120px;
+
+        img {
+            width: 20px;
+            cursor: pointer;
+            transition: all 125ms ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .h1_container {
+        @include size($w: 300px, $h: 281px);
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 48px, $fw: 700, $lh: 48px, $c: #000000);
+        }
+    }
+
+    .box_size {
+        @include size($w: 300px, $h: 491px);
+
+        &.german {
+            width: 300px;
+        }
+
+        .nav_line_0 {
+            height: 24px;
+        }
+
+        .nav_line_1 {
+            height: 86.7px;
+        }
+
+        .nav_line_2 {
+            height: 86.7px;
+        }
+    }
+
+    .nav_footer_container {
+        height: 200px;
+        .nav_footer_text {
+            @include size($w: 100%, $h: 25px);
+
+            >a {
+                @include fontStyle($ff: 'Syne', $fs: 20px, $fw: 800, $lh: 20px, $c: #FFFCF3);
+
+                &.german {
+                    @include fontStyle($ff: 'Syne', $fs: 16px, $fw: 800, $lh: 16px, $c: #FFFCF3);
+                }
+            }
+        }
+    }
+
+    .mail_n_icons_container {
+        height: 25px;
+        >a {
+            @include fontStyle($ff: 'Overpass', $fs: 14px, $fw: 300, $lh: 14px, $c: #FFFCF3);
+            height: 30px;
+        }
+    }
+
+    .icons {
+        @include position($pos: absolute, $top: auto, $left: auto, $bottom: 5px, $right: 20px);
+        width: 80px;
+
+        img {
+            width: 16px;
+        }
+    }
+}
+
