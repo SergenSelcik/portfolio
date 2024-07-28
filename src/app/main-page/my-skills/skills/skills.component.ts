@@ -7,7 +7,9 @@ import { SkillService } from '../../../services/skill.service';
   standalone: true,
   imports: [CommonModule,],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrls: ['./skills.component.scss',
+    './skills-responsive.component.scss',
+  ]
 })
 export class SkillsComponent {
   skills = inject(SkillService).skills;

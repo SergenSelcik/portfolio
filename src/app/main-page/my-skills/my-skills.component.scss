@@ -16,7 +16,7 @@
 
 .my_skills_container {
     @include dFlex($jc: center, $ai: end);
-    height: 760px;
+    height: 100%;
 }
 
 .my_skills {
@@ -45,6 +45,7 @@
         transform: translate(-50%, -50%);
         transition: all 125ms ease;
         cursor: default;
+        white-space: nowrap;
 
         &.german {
             white-space: nowrap;

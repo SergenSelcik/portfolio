@@ -8,7 +8,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrls: ['./about-me.component.scss',
+    './about-me-responsive.component.scss',
+  ]
 })
 export class AboutMeComponent {
   firstHover = true;

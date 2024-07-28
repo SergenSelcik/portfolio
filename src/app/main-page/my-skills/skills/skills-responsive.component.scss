@@ -1,0 +1,106 @@
+@import '../../../../styles.scss';
+
+@media (max-width: 1580px) {
+    .skills_container {
+        padding: 160px 120px
+    }
+}
+
+@media (max-width: 1535px) {
+    .skills_container {
+        padding: 160px 100px
+    }
+}
+
+@media (max-width: 1491px) {
+    .skills_container {
+        padding: 160px 80px
+    }
+}
+
+@media (max-width: 1451px) {
+    .skills_container {
+        padding: 160px 60px
+    }
+}
+
+@media (max-width: 1408px) {
+    .skills_container {
+        padding: 160px 40px
+    }
+}
+
+@media (max-width: 1367px) {
+    .skills_container {
+        padding: 100px 60px
+    }
+}
+
+@media (max-width: 1235px) {
+    .skill {
+        img {
+            @include size($w: 60px, $h: 60px);
+        }
+    }
+}
+
+@media (max-width: 955px) {
+    .skill {
+        img {
+            @include size($w: 55px, $h: 55px);
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .skills_container {
+        column-gap: 140px;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 580px) {
+    .skills_container {
+        @include dFlex($jc: center);
+        flex-wrap: wrap;
+        column-gap: 140px;
+        row-gap: 50px;
+        padding: 80px 40px
+    }
+}
+
+@media (max-width: 480px) {
+    .skills_container {
+        @include dFlex($jc: center);
+        flex-wrap: wrap;
+        column-gap: 80px;
+        row-gap: 50px;
+        padding: 80px 40px
+    }
+}
+
+@media (max-width: 440px) {
+    .skills_container {
+        @include dFlex($jc: center);
+        flex-wrap: wrap;
+        column-gap: 80px;
+        row-gap: 30px;
+        padding: 60px 20px
+    }
+
+    .skill {
+        img {
+            @include size($w: 50px, $h: 50px);
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .skills_container {
+        @include dFlex($jc: center);
+        flex-wrap: wrap;
+        column-gap: 50px;
+        row-gap: 30px;
+        padding: 60px 20px
+    }
+}

@@ -137,7 +137,7 @@
 
 .arrow_container {
     @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
-    @include size($w: 100%, $h: 340px);
+    @include size($w: 100%, $h: 500px);
 
     .arrow_images {
         @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 320px);

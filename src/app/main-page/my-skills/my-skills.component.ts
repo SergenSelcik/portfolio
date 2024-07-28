@@ -9,7 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, SkillsComponent, TranslateModule],
   templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+  styleUrls: ['./my-skills.component.scss',
+    './my-skills-responsive.component.scss',
+  ]
 })
 export class MySkillsComponent {
   firstHover = true;

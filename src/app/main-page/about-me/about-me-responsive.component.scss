@@ -1,0 +1,519 @@
+@import '../../../styles.scss';
+
+@media (max-width: 1620px) {
+    .about_me_section {
+        display: flex;
+        justify-content: space-around;
+        height: 1000px;
+    }
+
+    .about_me_text_container {
+        margin-left: 20px;
+        width: 750px;
+
+        .h1_container {
+            font-size: 84px;
+        }
+
+        .text_container {
+            font-size: 28px;
+        }
+
+        .button_container {
+            a {
+
+                button {
+                    @include size($w: 230px, $h: 74px);
+                    @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 400, $lh: 26.6px, $c: #000000);
+
+                    &:hover {
+                        width: 288px;
+                        @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 700, $lh: 26.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        bottom: 50px;
+        @include size($w: 600px, $h: 600px);
+        margin-right: 20px;
+
+        img {
+            height: 580px;
+        }
+    }
+
+    .border {
+        @include size($w: 580px, $h: 580px);
+    }
+
+    @keyframes slide {
+        from {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        to {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            bottom: 0;
+            right: 0;
+        }
+
+        to {
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+}
+
+@media (max-width: 1480px) {
+    .about_me_text_container {
+        width: 600px;
+        gap: 28px;
+
+        .h1_container {
+            font-size: 70px;
+        }
+
+        .text_container {
+            font-size: 24px;
+        }
+
+        .button_container {
+            a {
+
+                button {
+                    @include size($w: 218px, $h: 70px);
+                    @include fontStyle($ff: 'Overpass', $fs: 21px, $fw: 400, $lh: 24.6px, $c: #000000);
+
+                    &:hover {
+                        width: 270px;
+                        @include fontStyle($ff: 'Overpass', $fs: 21px, $fw: 700, $lh: 24.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        bottom: 120px;
+        @include size($w: 500px, $h: 500px);
+
+        img {
+            height: 480px;
+        }
+    }
+
+    .border {
+        @include size($w: 480px, $h: 480px);
+
+    }
+
+    @keyframes slide {
+        from {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        to {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            bottom: 0;
+            right: 0;
+        }
+
+        to {
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+        @include size($w: 100%, $h: 340px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 100px, $right: 300px);
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .about_me_section {
+        gap: 80px;
+    }
+
+    .about_me_text_container {
+        width: 550px;
+        gap: 38px;
+
+        .h1_container {
+            font-size: 60px;
+            line-height: 60px;
+        }
+
+        .text_container {
+            font-size: 22px;
+        }
+
+        .button_container {
+            a {
+                button {
+                    @include size($w: 200px, $h: 60px);
+                    @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 21.6px, $c: #000000);
+                    border: 3px solid black;
+
+                    &:hover {
+                        width: 250px;
+                        @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 700, $lh: 21.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        bottom: 200px;
+        @include size($w: 430px, $h: 430px);
+
+        img {
+            height: 410px;
+        }
+    }
+
+    .border {
+        @include size($w: 410px, $h: 410px);
+
+    }
+
+    @keyframes slide {
+        from {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        to {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            bottom: 0;
+            right: 0;
+        }
+
+        to {
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+        @include size($w: 100%, $h: 300px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 200px, $right: 200px);
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .about_me_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .about_me_text_container {
+        position: inherit;
+        width: 560px;
+
+        .h1_container {
+            font-size: 70px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        .text_container {
+            @include fontStyle($ff: 'Overpass', $fs: 26px, $fw: 400, $lh: 31.6px, $c: #000000);
+            cursor: default;
+        }
+
+        .button_container {
+
+            a {
+                button {
+                    @include size($w: 230px, $h: 74px);
+                    @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 400, $lh: 26.6px, $c: #000000);
+
+                    &:hover {
+                        width: 288px;
+                        @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 700, $lh: 26.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: inherit;
+        @include dFlex($jc: center, $ai: center);
+        @include size($w: 100%, $h: 100%);
+        margin: 0;
+
+        img {
+            height: 430px;
+        }
+    }
+
+    .border {
+        display: none;
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+        @include size($w: 100%, $h: 340px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 320px);
+
+            .arrow_short_start {
+                height: 220px;
+            }
+
+            .arrow_long {
+                height: 200px;
+            }
+
+            .arrow_short_end {
+                height: 220px;
+            }
+        }
+    }
+}
+
+@media (max-width: 870px) {
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 240px);
+        }
+    }
+}
+
+@media (max-width: 710px) {
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 150px);
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .arrow_container {
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 200px);
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .about_me_section{
+        gap: 0;
+    }
+    .about_me_text_container {
+        width: 100%;
+        gap: 38px;
+        margin: 0;
+
+        .h1_container {
+            display: flex;
+            justify-content: center;
+            font-size: 46px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .text_container {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .button_container {
+            a {
+                button {
+                    @include size($w: 170px, $h: 50px);
+                    @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 15.6px, $c: #000000);
+                    padding: 16px 50px 16px 50px;
+
+                    &:hover {
+                        width: 200px;
+                        @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 700, $lh: 15.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        bottom: 0;
+
+        img {
+            height: 360px;
+        }
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 50px, $right: 100px);
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .about_me_text_container {
+        width: 100%;
+        gap: 28px;
+        margin: 0;
+
+        .h1_container {
+            display: flex;
+            justify-content: center;
+            font-size: 46px;
+            width: 100%;
+            margin: 0;
+        }
+
+        .text_container {
+            font-size: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        bottom: 0;
+
+        img {
+            height: 360px;
+        }
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 50px, $right: 50px);
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .about_me_section {
+        height: 800px;
+        gap: 40px;
+    }
+
+    .about_me_text_container {
+        @include size($w: 100%, $h: 400px);
+        gap: 28px;
+        margin: 0;
+
+        .h1_container {
+            font-size: 39px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        .text_container {
+            font-size: 16px;
+            line-height: 21px;
+            margin-left: 20px;
+        }
+
+        .button_container {
+            a {
+                button {
+                    @include size($w: 170px, $h: 50px);
+                    @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 15.6px, $c: #000000);
+                    padding: 16px 50px 16px 50px;
+
+                    &:hover {
+                        width: 200px;
+                        @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 700, $lh: 15.6px, $c: #000000);
+                    }
+                }
+            }
+        }
+    }
+
+    .about_me_image {
+        position: relative;
+        height: 400px;
+        bottom: 0;
+
+        img {
+            height: 280px;
+        }
+    }
+
+    .arrow_container {
+        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
+        @include size($w: 100%, $h: 270px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 50px, $right: 30px);
+
+            .arrow_short_start {
+                height: 180px;
+            }
+
+            .arrow_long {
+                height: 160px;
+            }
+
+            .arrow_short_end {
+                height: 180px;
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .about_me_text_container {
+        .h1_container {
+            font-size: 36px;
+            line-height: 41px;
+        }
+    }
+}
