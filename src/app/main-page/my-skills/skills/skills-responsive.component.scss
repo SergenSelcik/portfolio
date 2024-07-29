@@ -72,10 +72,18 @@
 @media (max-width: 480px) {
     .skills_container {
         @include dFlex($jc: center);
+
         flex-wrap: wrap;
         column-gap: 80px;
         row-gap: 50px;
         padding: 80px 40px
+    }
+
+    .skill {
+        @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 700, $lh: 16.2px, $c: #000000);
+        img {
+            @include size($w: 50px, $h: 50px);
+        }
     }
 }
 
@@ -87,10 +95,10 @@
         row-gap: 30px;
         padding: 60px 20px
     }
-
     .skill {
+        @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 700, $lh: 16.2px, $c: #000000);
         img {
-            @include size($w: 50px, $h: 50px);
+            @include size($w: 40px, $h: 40px);
         }
     }
 }

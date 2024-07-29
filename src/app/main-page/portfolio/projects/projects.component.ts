@@ -9,7 +9,9 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss',
+    './projects-responsive.component.scss',
+  ]
 })
 export class ProjectsComponent {
   projects = inject(ProjectsService).projects;

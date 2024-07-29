@@ -154,6 +154,7 @@
 @media (max-width: 580px) {
     .my_skills {
         @include size($w: 450px, $h: 820px);
+        border: 2px solid black;
 
         &::before {
             width: 270px;
@@ -176,25 +177,20 @@
     }
 }
 
+@media (max-width: 480px) {
+    .my_skills {
+        @include size($w: 450px, $h: 780px);
+    }
+}
+
 @media (max-width: 440px) {
     .my_skills {
-        @include size($w: 450px, $h: 670px);
-        border: 4px solid black;
-        position: relative;
-
-        &.german::before {
-            width: 350px;
-        }
-
-        &.german h1 {
-            @include fontStyle($ff: 'Syne', $fs: 38px, $fw: 800, $lh: 38px, $c: #000000);
-        }
+        @include size($w: 450px, $h: 600px);
     }
 }
 
 @media (max-width: 400px) {
     .my_skills {
-        border: 4px solid black;
         position: relative;
 
         &.german::before {

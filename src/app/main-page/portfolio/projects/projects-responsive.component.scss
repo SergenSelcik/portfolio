@@ -1,0 +1,277 @@
+@import '../../../../styles.scss';
+
+@media (max-width: 1650px) {
+    .project_img {
+        min-width: 750px;
+        margin-left: 20px;
+        height: 100%;
+
+        >a {
+            @include position($pos: absolute, $top: 0, $left: 0, $bottom: auto, $right: auto);
+            width: 750px;
+            height: 400px;
+        }
+
+        >img {
+            height: 400px;
+        }
+
+        .border {
+            @include position($pos: absolute, $top: 0px, $left: 0px, $bottom: auto, $right: auto);
+            @include size($w: 710px, $h: 400px);
+            transition: opacity 250ms ease;
+            border: 4px solid black;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+
+            .arrow_img {
+                height: 80px;
+                right: -43px;
+            }
+        }
+    }
+
+    .project_content {
+        position: relative;
+        z-index: 1;
+        left: -830px;
+        @include dFlex($jc: center, $ai: start);
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 600px;
+        opacity: 0;
+        transition: opacity 250ms ease;
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 52px, $fw: 800, $lh: 52px, $c: #000000);
+            cursor: default;
+        }
+
+        .technologies {
+            @include fontStyle($ff: 'Overpass', $fs: 30px, $fw: 400, $lh: 34.6px, $c: #FF9900);
+            cursor: default;
+        }
+
+        .description {
+            @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 400, $lh: 27.2px, $c: #000000);
+            cursor: default;
+        }
+    }
+
+    a {
+        @include dFlex($jc: center, $ai: center);
+        @include size($w: 200px, $h: 85px);
+        @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 400, $lh: 32.6px, $c: #000000);
+        background-color: #FFFCF3;
+        border: 4px solid black;
+        padding: 20px 60px 20px 60px;
+        transition: all 125ms ease;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            width: 250px;
+            @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 700, $lh: 32.6px, $c: #000000);
+        }
+
+        &:active {
+            background-color: #000000;
+            color: #FFFCF3;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .swap_content {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .swap_content.project_img {
+            order: 2;
+        }
+
+        .swap_content.project_content {
+            order: 1;
+        }
+
+        .project_content {
+            left: 830px;
+            margin-left: 20px;
+        }
+
+        .border {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            .arrow_img {
+                height: 80px;
+                left: -43px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1410px) {
+    .project {
+        @include dFlex($ai: center);
+        gap: 50px;
+        transition: all ease-in-out 250ms;
+
+        &:not(:hover) {
+            .project_content {
+                animation: slideBack 1000ms forwards;
+            }
+        }
+    }
+
+    .project_img {
+        min-width: 700px;
+        margin-left: 20px;
+        height: 100%;
+
+        >a {
+            @include position($pos: absolute, $top: 0, $left: 0, $bottom: auto, $right: auto);
+            width: 700px;
+            height: 350px;
+        }
+
+        >img {
+            height: 350px;
+        }
+
+        .border {
+            @include position($pos: absolute, $top: 0px, $left: 0px, $bottom: auto, $right: auto);
+            @include size($w: 625px, $h: 350px);
+            transition: opacity 250ms ease;
+            border: 4px solid black;
+            opacity: 0;
+            z-index: 10;
+            cursor: pointer;
+
+            .arrow_img {
+                height: 65px;
+                right: -35px;
+            }
+        }
+    }
+
+    .project_content {
+        position: relative;
+        z-index: 1;
+        left: -730px;
+        @include dFlex($jc: center, $ai: start);
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 600px;
+        opacity: 0;
+        transition: opacity 250ms ease;
+
+        h1 {
+            @include fontStyle($ff: 'Syne', $fs: 42px, $fw: 800, $lh: 42px, $c: #000000);
+            cursor: default;
+        }
+
+        .technologies {
+            @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.6px, $c: #FF9900);
+            cursor: default;
+        }
+
+        .description {
+            @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 400, $lh: 22.2px, $c: #000000);
+            cursor: default;
+        }
+    }
+
+    a {
+        @include dFlex($jc: center, $ai: center);
+        @include size($w: 170px, $h: 65px);
+        @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 400, $lh: 24.6px, $c: #000000);
+        background-color: #FFFCF3;
+        border: 3px solid black;
+        padding: 20px 60px 20px 60px;
+        transition: all 125ms ease;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            width: 210px;
+            @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 700, $lh: 24.6px, $c: #000000);
+        }
+
+        &:active {
+            background-color: #000000;
+            color: #FFFCF3;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .swap_content {
+        display: flex;
+        flex-direction: row-reverse;
+
+        .swap_content.project_img {
+            order: 2;
+        }
+
+        .swap_content.project_content {
+            order: 1;
+        }
+
+        .project_content {
+            left: 730px;
+            margin-left: 20px;
+        }
+
+        .border {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+            .arrow_img {
+                height: 65px;
+                left: -35px;
+            }
+        }
+    }
+
+    .swap_content.project {
+        &:not(:hover) {
+            .project_content {
+                animation: slideBackSwapContent 750ms forwards;
+            }
+        }
+    }
+
+    @keyframes slideBack {
+        0% {
+            left: 0;
+        }
+    
+        100% {
+            left: -730px;
+        }
+    }
+
+    @keyframes slideBackSwapContent {
+        0% {
+            left: 0;
+        }
+    
+        100% {
+            left: 730px;
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    
+}

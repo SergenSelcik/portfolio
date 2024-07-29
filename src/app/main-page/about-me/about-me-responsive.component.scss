@@ -165,6 +165,7 @@
         .h1_container {
             font-size: 60px;
             line-height: 60px;
+            white-space: nowrap;
         }
 
         .text_container {
@@ -259,6 +260,7 @@
         .text_container {
             @include fontStyle($ff: 'Overpass', $fs: 26px, $fw: 400, $lh: 31.6px, $c: #000000);
             cursor: default;
+            text-align: center;
         }
 
         .button_container {
@@ -340,6 +342,12 @@
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 200px);
         }
     }
+    .about_me_text_container {
+        .h1_container {
+            font-size: 65px;
+        }
+    }
+
 }
 
 @media (max-width: 580px) {
@@ -362,6 +370,7 @@
         .text_container {
             font-size: 20px;
             margin-left: 20px;
+
         }
 
         .button_container {
