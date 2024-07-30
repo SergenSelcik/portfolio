@@ -9,7 +9,7 @@
                 @if (showSuccessMessage) {
                     <div data-aos="zoom-out-up" class="dialog-background" [ngClass]="{ 'fade-out': disappearanceAnimation }" class="dialog-background" data-aos="zoom-out-up">
                         <div class="success-message-dialog">
-                            <img src="./assets/img/success.png" alt="">
+                            <img src="./assets/img/success.png" alt="a green checkmark">
                             <span>
                                 {{ 'Thank you!' | translate }}<br>
                                 {{ 'Your message was successfully sent.' | translate }}
@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="arrow_up_container">
-            <img (click)="scrollToTop()" src="./assets/img/arrow_up.png" alt="an arrow going up">
+            <img (click)="scrollToTop()" src="./assets/img/arrow_up.png" alt="an arrow animation where it goes up">
             <span>{{ 'Back to top' | translate }}</span>
         </div>
     </div>

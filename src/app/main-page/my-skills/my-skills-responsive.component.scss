@@ -206,7 +206,7 @@
 @media (max-width: 390px) {
     .arrow_container {
         @include position($pos: relative, $top: 0, $left: -40px, $bottom: auto, $right: auto);
-        @include size($w: 100%, $h: 340px);
+        @include size($w: 100%, $h: 240px);
 
         .arrow_images {
 

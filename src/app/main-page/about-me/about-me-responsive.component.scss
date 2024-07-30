@@ -2,9 +2,7 @@
 
 @media (max-width: 1620px) {
     .about_me_section {
-        display: flex;
         justify-content: space-around;
-        height: 1000px;
     }
 
     .about_me_text_container {
@@ -36,7 +34,6 @@
     }
 
     .about_me_image {
-        position: relative;
         bottom: 50px;
         @include size($w: 600px, $h: 600px);
         margin-right: 20px;
@@ -48,30 +45,6 @@
 
     .border {
         @include size($w: 580px, $h: 580px);
-    }
-
-    @keyframes slide {
-        from {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        to {
-            bottom: 0;
-            right: 0;
-        }
-    }
-
-    @keyframes slideOut {
-        from {
-            bottom: 0;
-            right: 0;
-        }
-
-        to {
-            bottom: 20px;
-            right: 20px;
-        }
     }
 }
 
@@ -105,7 +78,6 @@
     }
 
     .about_me_image {
-        position: relative;
         bottom: 120px;
         @include size($w: 500px, $h: 500px);
 
@@ -116,35 +88,9 @@
 
     .border {
         @include size($w: 480px, $h: 480px);
-
-    }
-
-    @keyframes slide {
-        from {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        to {
-            bottom: 0;
-            right: 0;
-        }
-    }
-
-    @keyframes slideOut {
-        from {
-            bottom: 0;
-            right: 0;
-        }
-
-        to {
-            bottom: 20px;
-            right: 20px;
-        }
     }
 
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
         @include size($w: 100%, $h: 340px);
 
         .arrow_images {
@@ -189,7 +135,6 @@
     }
 
     .about_me_image {
-        position: relative;
         bottom: 200px;
         @include size($w: 430px, $h: 430px);
 
@@ -200,40 +145,13 @@
 
     .border {
         @include size($w: 410px, $h: 410px);
-
-    }
-
-    @keyframes slide {
-        from {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        to {
-            bottom: 0;
-            right: 0;
-        }
-    }
-
-    @keyframes slideOut {
-        from {
-            bottom: 0;
-            right: 0;
-        }
-
-        to {
-            bottom: 20px;
-            right: 20px;
-        }
     }
 
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
         @include size($w: 100%, $h: 300px);
 
         .arrow_images {
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 200px, $right: 200px);
-            cursor: pointer;
         }
     }
 }
@@ -248,6 +166,7 @@
     .about_me_text_container {
         position: inherit;
         width: 560px;
+        margin: 0;
 
         .h1_container {
             font-size: 70px;
@@ -259,12 +178,10 @@
 
         .text_container {
             @include fontStyle($ff: 'Overpass', $fs: 26px, $fw: 400, $lh: 31.6px, $c: #000000);
-            cursor: default;
             text-align: center;
         }
 
         .button_container {
-
             a {
                 button {
                     @include size($w: 230px, $h: 74px);
@@ -295,7 +212,6 @@
     }
 
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
         @include size($w: 100%, $h: 340px);
 
         .arrow_images {
@@ -318,8 +234,6 @@
 
 @media (max-width: 870px) {
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
-
         .arrow_images {
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 240px);
         }
@@ -328,8 +242,6 @@
 
 @media (max-width: 710px) {
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
-
         .arrow_images {
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 150px);
         }
@@ -342,6 +254,7 @@
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 200px);
         }
     }
+
     .about_me_text_container {
         .h1_container {
             font-size: 65px;
@@ -351,26 +264,22 @@
 }
 
 @media (max-width: 580px) {
-    .about_me_section{
+    .about_me_section {
         gap: 0;
     }
+
     .about_me_text_container {
         width: 100%;
         gap: 38px;
-        margin: 0;
 
         .h1_container {
-            display: flex;
-            justify-content: center;
             font-size: 46px;
-            width: 100%;
-            margin: 0;
         }
 
         .text_container {
             font-size: 20px;
             margin-left: 20px;
-
+            margin-right: 20px;
         }
 
         .button_container {
@@ -409,28 +318,10 @@
 
 @media (max-width: 440px) {
     .about_me_text_container {
-        width: 100%;
         gap: 28px;
-        margin: 0;
-
-        .h1_container {
-            display: flex;
-            justify-content: center;
-            font-size: 46px;
-            width: 100%;
-            margin: 0;
-        }
-
-        .text_container {
-            font-size: 20px;
-            margin-left: 20px;
-        }
     }
 
     .about_me_image {
-        position: relative;
-        bottom: 0;
-
         img {
             height: 360px;
         }
@@ -453,15 +344,9 @@
 
     .about_me_text_container {
         @include size($w: 100%, $h: 400px);
-        gap: 28px;
-        margin: 0;
 
         .h1_container {
             font-size: 39px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: 0;
         }
 
         .text_container {
@@ -487,9 +372,7 @@
     }
 
     .about_me_image {
-        position: relative;
         height: 400px;
-        bottom: 0;
 
         img {
             height: 280px;
@@ -497,7 +380,6 @@
     }
 
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: auto, $bottom: auto, $right: 0);
         @include size($w: 100%, $h: 270px);
 
         .arrow_images {

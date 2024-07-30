@@ -2,14 +2,12 @@
 
 @media (max-width: 1640px) {
     .nav_footer_text {
-
         >a {
             margin-left: 20px;
         }
     }
 
     .mail_n_icons_container {
-
         >a {
             margin-left: 20px;
         }
@@ -66,7 +64,6 @@
     }
 
     .mail_n_icons_container {
-
         >a {
             @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 300, $lh: 23px, $c: #FFFCF3);
             height: 30px;
@@ -150,7 +147,6 @@
     }
 
     .nav_footer_container {
-
         .nav_footer_text {
             @include size($w: 100%, $h: 30px);
 
@@ -165,7 +161,6 @@
     }
 
     .mail_n_icons_container {
-
         >a {
             @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 300, $lh: 20px, $c: #FFFCF3);
             height: 30px;
@@ -220,6 +215,7 @@
 
     .nav_footer_container {
         height: 200px;
+
         .nav_footer_text {
             @include size($w: 100%, $h: 30px);
 
@@ -235,6 +231,7 @@
 
     .mail_n_icons_container {
         height: 30px;
+
         >a {
             @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 300, $lh: 16px, $c: #FFFCF3);
             height: 30px;
@@ -290,6 +287,7 @@
 
     .nav_footer_container {
         height: 200px;
+
         .nav_footer_text {
             @include size($w: 100%, $h: 25px);
 
@@ -305,6 +303,7 @@
 
     .mail_n_icons_container {
         height: 25px;
+
         >a {
             @include fontStyle($ff: 'Overpass', $fs: 14px, $fw: 300, $lh: 14px, $c: #FFFCF3);
             height: 30px;
@@ -320,4 +319,3 @@
         }
     }
 }
-

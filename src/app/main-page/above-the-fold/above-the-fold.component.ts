@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, TranslateModule],
   templateUrl: './above-the-fold.component.html',
   styleUrls: [
-    './above-the-fold.component.scss', 
+    './above-the-fold.component.scss',
     './above-the-fold-responsive.component.scss'
   ]
 })

@@ -1,6 +1,5 @@
 @import '../../../styles.scss';
 
-
 .bg_style {
     @include position($pos: relative, $top: auto, $left: auto, $bottom: 0px, $right: auto);
     width: 100%;

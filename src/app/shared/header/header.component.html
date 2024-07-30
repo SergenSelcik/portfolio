@@ -1,7 +1,7 @@
 <div class="bg_style" [class.margin_right]="isMenuRoute || isImprintRoute">
   <div class="max_width">
     <div class="header">
-      <img (click)="navigateToHome(); scrollToTop()" class="logo" src="./assets/img/logo.png" alt="">
+      <img (click)="navigateToHome(); scrollToTop()" class="logo" src="./assets/img/logo.png" alt="my own homepage logo">
       <div class="language_menu_container">
         <div class="language">
           <p (click)="translate.switchLanguage('en')" [class.selected]="translate.getCurrentLanguage() === 'en'">EN</p>

@@ -4,15 +4,15 @@
     .portfolio_container {
         width: 500px;
         margin-top: 60px;
-    
+
         >h1 {
             @include fontStyle($ff: 'Syne', $fs: 68px, $fw: 800, $lh: 68px, $c: #000000);
         }
-    
+
         >span {
             @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 400, $lh: 29.6px, $c: #000000);
-    
-            &.german{
+
+            &.german {
                 @include fontStyle($ff: 'Overpass', $fs: 21px, $fw: 400, $lh: 29.6px, $c: #000000);
             }
         }
@@ -23,9 +23,31 @@
     .portfolio_container {
         width: 500px;
         margin-top: 20px;
-    
+
         >span {
             text-align: center;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .arrow_container {
+        @include size($w: 100%, $h: 340px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 250px);
+
+            .arrow_short_start {
+                height: 220px;
+            }
+
+            .arrow_long {
+                height: 200px;
+            }
+
+            .arrow_short_end {
+                height: 220px;
+            }
         }
     }
 }
@@ -34,36 +56,79 @@
     .portfolio_container {
         width: 400px;
         gap: 30px;
-    
+
         >h1 {
             @include fontStyle($ff: 'Syne', $fs: 46px, $fw: 800, $lh: 46px, $c: #000000);
         }
-    
+
         >span {
             @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 27.6px, $c: #000000);
-    
-            &.german{
+
+            &.german {
                 @include fontStyle($ff: 'Overpass', $fs: 19px, $fw: 400, $lh: 27.6px, $c: #000000);
             }
+        }
+    }
+
+    .arrow_container {
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 200px);
         }
     }
 }
 
 @media (max-width: 440px) {
+    .max_width {
+        gap: 30px;
+    }
+
     .portfolio_container {
         width: 300px;
         gap: 30px;
-    
+
         >h1 {
-            @include fontStyle($ff: 'Syne', $fs: 36px, $fw: 800, $lh: 36px, $c: #000000);
+            @include fontStyle($ff: 'Syne', $fs: 39px, $fw: 800, $lh: 39px, $c: #000000);
         }
-    
+
         >span {
             @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 23.6px, $c: #000000);
             text-align: center;
-    
-            &.german{
+
+            &.german {
                 @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 23.6px, $c: #000000);
+            }
+        }
+    }
+
+    .arrow_container {
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 100px);
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .portfolio_container {
+        height: 250px;
+        margin-top: 0px;
+    }
+
+    .arrow_container {
+        @include size($w: 100%, $h: 270px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 20px);
+
+            .arrow_short_start {
+                height: 180px;
+            }
+
+            .arrow_long {
+                height: 160px;
+            }
+
+            .arrow_short_end {
+                height: 180px;
             }
         }
     }
