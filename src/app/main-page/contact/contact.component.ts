@@ -12,7 +12,9 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, RouterLink, FormsModule, TranslateModule
   ],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss',
+    './contact-responsive.component.scss'
+  ]
 })
 export class ContactComponent {
 

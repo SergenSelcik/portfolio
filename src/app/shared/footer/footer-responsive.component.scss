@@ -1,0 +1,103 @@
+@import '../../../styles.scss';
+
+@media (max-width: 1640px) {
+    .footer_logo {
+        margin-left: 20px;
+    }
+
+    .footer_links {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer_logo {
+        @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 300, $lh: 28.8px, $c: #FFFFFF);
+    }
+
+    .icons {
+        width: 170px;
+
+        img {
+            width: 27px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .bg_style{
+        margin: 0;
+    }
+
+    .max_width {
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer_logo {
+        @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 300, $lh: 24.8px, $c: #FFFFFF);
+        align-items: center;
+        margin-left: 0px;
+        width: 100%;
+
+        img {
+            height: 60px;
+        }
+    }
+
+    .icons {
+        width: 140px;
+        margin-right: 0px;
+        align-items: baseline;
+
+        img {
+            width: 24px;
+        }
+    }
+
+    .legal_notice {
+        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 21.2px, $c: #FFFCF3);
+        @include dFlex($jc: center, $ai: center);
+        @include size($w: 100%, $h: 19px);
+
+        &:before {
+            width: 0px;
+            height: 0px;
+        }
+    }
+
+    .footer_links {
+        margin-right: 0px;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 395px) {
+    .footer_logo {
+        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 22.8px, $c: #FFFFFF);
+
+        img {
+            height: 60px;
+        }
+    }
+
+    .icons {
+        width: 100px;
+
+        img {
+            width: 20px;
+        }
+    }
+
+    .legal_notice {
+        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 21.2px, $c: #FFFCF3);
+    }
+}

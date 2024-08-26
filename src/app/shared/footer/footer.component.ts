@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, TranslateModule, CommonModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss',
+    './footer-responsive.component.scss'],
 })
 export class FooterComponent {
   translate = inject(TranslationService)

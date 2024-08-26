@@ -77,6 +77,14 @@
     }
 }
 
+@media (max-width: 520px) {
+    .arrow_container {
+        .arrow_images {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 100px);
+        }
+    }
+}
+
 @media (max-width: 440px) {
     .max_width {
         gap: 30px;
@@ -102,7 +110,7 @@
 
     .arrow_container {
         .arrow_images {
-            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 100px);
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 50px);
         }
     }
 }

@@ -72,7 +72,6 @@
     @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 300, $lh: 23.2px, $c: #FFFCF3);
     @include size($w: 115px, $h: 19px);
     text-decoration: none;
-    position: relative;
     transition: all 125ms ease;
 
     &.german {
