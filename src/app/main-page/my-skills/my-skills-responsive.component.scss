@@ -128,8 +128,15 @@
     }
 
     .arrow_container {
-        @include position($pos: relative, $top: 0, $left: 40px, $bottom: auto, $right: auto);
+        @include position($pos: relative, $top: 0, $left: 0, $bottom: auto, $right: auto);
         @include size($w: 100%, $h: 340px);
+
+        .arrow_images {
+            @include position($pos: absolute, $top: 20px, $left: 40px, $bottom: auto, $right: auto);
+            width: 300px;
+
+            cursor: pointer;
+        }
     }
 }
 

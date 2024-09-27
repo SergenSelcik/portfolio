@@ -7,8 +7,8 @@
                 <span>{{ 'Ready to start a new project?' | translate }}</span>
                 <span [ngClass]="{ 'german': isGerman() }">{{ 'Let\'s discuss it and create something great.' | translate }}</span>
                 @if (showSuccessMessage) {
-                    <div data-aos="zoom-out-up" class="dialog-background" [ngClass]="{ 'fade-out': disappearanceAnimation }" class="dialog-background" data-aos="zoom-out-up">
-                        <div class="success-message-dialog">
+                    <div data-aos="zoom-out-up" class="dialog_background" [ngClass]="{ 'fade_out': disappearanceAnimation }" class="dialog_background" data-aos="zoom-out-up">
+                        <div class="success_message_dialog">
                             <img src="./assets/img/success.png" alt="a green checkmark">
                             <span>
                                 {{ 'Thank you!' | translate }}<br>
@@ -73,7 +73,7 @@
                                 [ngClass]="{'checkbox_unchecked':!isChecked, 'checkbox_checked': isChecked}"
                                 (click)="toggleCheckbox()">
                             </div>
-                            <div class="privacy_policy_text_container">
+                            <div [ngClass]="{ 'german': isGerman() }" class="privacy_policy_text_container">
                                 <div [ngClass]="{ 'german': isGerman() }" class="privacy_policy_text">
                                     <span [ngClass]="{ 'german': isGerman() }"> {{ 'Ive read the' | translate }}</span><a [ngClass]="{ 'german': isGerman() }" (click)="scrollToTop()"
                                         routerLink="/privacy-policy"> {{ 'privacy policy' | translate }}</a>

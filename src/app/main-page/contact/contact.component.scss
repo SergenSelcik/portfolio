@@ -200,6 +200,7 @@ form {
         justify-content: center;
         align-items: center;
         height: 50px;
+        gap: 10px;
     }
 
     .checkbox {
@@ -235,25 +236,21 @@ form {
 
     .privacy_policy_text {
         @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FFFCF3);
-        @include dFlex($jc: center, $ai: center);
+        display: block;
         width: 100%;
-        text-align: center;
 
         &.german {
             display: block;
-            margin-top: 15px;
         }
 
         a {
             @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 20px, $c: #FF9900);
             text-decoration: none;
-            display: inline-block;
             width: 140px;
             transition: all 250ms ease;
 
             &.german {
                 width: 190px;
-                margin-left: 5px;
             }
 
             &:hover {
@@ -373,7 +370,7 @@ button {
     }
 }
 
-.dialog-background {
+.dialog_background {
     position: fixed;
     top: 0;
     left: 0;
@@ -386,7 +383,7 @@ button {
     z-index: 1000;
 }
 
-.success-message-dialog {
+.success_message_dialog {
     @include fontStyle($ff: 'Overpass', $fs: 48px, $fw: 400, $lh: 59px, $c: #000000);
     display: flex;
     flex-direction: column;
@@ -405,7 +402,7 @@ button {
     }
 }
 
-.fade-out {
+.fade_out {
     opacity: 1;
     animation: fadeOut 250ms forwards;
 }

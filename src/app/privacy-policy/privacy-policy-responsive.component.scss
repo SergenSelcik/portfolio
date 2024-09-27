@@ -1,0 +1,100 @@
+@import '../../styles.scss';
+
+@media (max-width: 840px) {
+    .bg_style {
+        margin: 0;
+    }
+
+    .content {
+        width: calc(100% - 40px);
+        padding-top: 120px;
+        padding-bottom: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 300, $lh: 24px, $c: #000000);
+
+        h1 {
+            @include fontStyle($ff: 'Overpass', $fs: 58px, $fw: 500, $lh: 58px, $c: #000000);
+            letter-spacing: -3.5px;
+        }
+
+        h2 {
+            @include fontStyle($ff: 'Overpass', $fs: 34px, $fw: 700, $lh: 34px, $c: #000000);
+            letter-spacing: -1.5px;
+        }
+
+        h3 {
+            @include fontStyle($ff: 'Overpass', $fs: 28px, $fw: 600, $lh: 28px, $c: #000000);
+            letter-spacing: -1.5px;
+        }
+
+        h4 {
+            @include fontStyle($ff: 'Overpass', $fs: 23px, $fw: 600, $lh: 23px, $c: #000000);
+            letter-spacing: -1.5px;
+        }
+
+        p {
+            @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 18px, $c: #000000);
+        }
+
+        a {
+            @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 300, $lh: 16px, $c: #FF9900);
+            text-decoration: none;
+            font-weight: 600;
+            color: #FF9900;
+        }
+    }
+
+    .margin_right {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .bg_style {
+        margin: 0;
+    }
+
+    .content {
+        width: calc(100% - 40px);
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 300, $lh: 24px, $c: #000000);
+
+        h1 {
+            @include fontStyle($ff: 'Overpass', $fs: 42px, $fw: 500, $lh: 42px, $c: #000000);
+            letter-spacing: -3.5px;
+        }
+
+        h2 {
+            @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 700, $lh: 24px, $c: #000000);
+            letter-spacing: -1.5px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #FF9900;
+        }
+    }
+
+    .margin_right {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

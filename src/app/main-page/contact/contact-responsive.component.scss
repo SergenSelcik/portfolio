@@ -1,1 +1,403 @@
 @import '../../../styles.scss';
+
+@media (max-width: 1640px) {
+    .contact_content {
+        >span {
+            margin-left: 20px;
+        }
+    }
+
+    .arrow_up_container {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bg_style {
+        img {
+            @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0px, $right: auto);
+            object-fit: cover;
+        }
+    }
+
+    .contact_content {
+        >span {
+            @include fontStyle($ff: 'Syne', $fs: 70px, $fw: 800, $lh: 70px, $c: #FFFCF3);
+
+            &.german {
+                @include fontStyle($ff: 'Syne', $fs: 48px, $fw: 800, $lh: 48px, $c: #FFFCF3);
+            }
+        }
+    }
+
+    .arrow_up_container {
+        >img {
+            @include position($pos: relative, $top: auto, $left: auto, $bottom: auto, $right: 0);
+        }
+    }
+
+    .dialog_background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .success_message_dialog {
+        @include fontStyle($ff: 'Overpass', $fs: 48px, $fw: 400, $lh: 59px, $c: #000000);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFCF3;
+        padding: 70px;
+        border-radius: 50px;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 50px;
+
+        >img {
+            position: relative;
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .arrow_up_container {
+        display: none;
+    }
+
+    .contact_content {
+        >span {
+            @include fontStyle($ff: 'Syne', $fs: 50px, $fw: 800, $lh: 50px, $c: #FFFCF3);
+
+            &.german {
+                @include fontStyle($ff: 'Syne', $fs: 40px, $fw: 800, $lh: 40px, $c: #FFFCF3);
+            }
+        }
+    }
+
+    .form_content {
+        >span:nth-child(1) {
+            @include fontStyle($ff: 'Overpass', $fs: 30px, $fw: 700, $lh: 36.4px, $c: #FF9900);
+        }
+
+        >span:nth-child(2) {
+            @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 400, $lh: 28.2px, $c: #FFFCF3);
+
+            &.german {
+                @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 400, $lh: 29px, $c: #FFFCF3);
+            }
+        }
+    }
+
+    form {
+        @include size($w: 700px, $h: 100%);
+
+        .input_container {
+
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 17px, $c: #FFFCF3);
+            }
+
+            input {
+                @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 21.2px, $c: #FFFCF3);
+                @include size($w: 100%, $h: 60px);
+            }
+        }
+
+        .textarea_container {
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 17px, $c: #FFFCF3);
+            }
+
+            textarea {
+                @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+                min-width: 700px;
+                max-width: 700px;
+            }
+        }
+    }
+
+    button {
+        @include size($w: 250px, $h: 80px);
+        @include fontStyle($ff: 'Overpass', $fs: 22px, $fw: 400, $lh: 26.6px, $c: #3b3b3b);
+        border: 3px solid #3b3b3b;
+        padding: 20px 40px 20px 40px;
+
+        &.german {
+            padding: 20px 30px 20px 30px;
+        }
+    }
+
+    .privacy_policy_text_container {
+        &.german {
+            text-align: start;
+        }
+
+        .privacy_policy_text {
+            @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 17px, $c: #FFFCF3);
+
+            a {
+                @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 17px, $c: #FF9900);
+                width: 106px;
+
+
+                &.german {
+                    width: 163px;
+                }
+            }
+        }
+    }
+
+    .error {
+        @include fontStyle($ff: 'Overpass', $fs: 17px, $fw: 400, $lh: 17px, $c: #E61C40);
+    }
+}
+
+@media (max-width: 830px) {
+    .contact_content {
+        >span {
+            &.german {
+                @include fontStyle($ff: 'Syne', $fs: 35px, $fw: 800, $lh: 35px, $c: #FFFCF3);
+            }
+        }
+    }
+
+    .form_content {
+        >span:nth-child(2) {
+
+            &.german {
+                @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 27px, $c: #FFFCF3);
+            }
+        }
+    }
+
+    form {
+        @include size($w: 600px, $h: 100%);
+
+        .textarea_container {
+            textarea {
+                min-width: 600px;
+                max-width: 600px;
+            }
+        }
+    }
+
+    .privacy_policy_text_container {
+        text-align: start;
+    }
+
+    .success_message_dialog {
+        >img {
+            position: relative;
+            width: 120px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .contact_content {
+        >span {
+            @include fontStyle($ff: 'Syne', $fs: 38px, $fw: 800, $lh: 38px, $c: #FFFCF3);
+
+            &.german {
+                @include fontStyle($ff: 'Syne', $fs: 27px, $fw: 800, $lh: 27px, $c: #FFFCF3);
+                white-space: unset;
+            }
+        }
+    }
+
+    .form_content {
+        >span:nth-child(1) {
+            @include fontStyle($ff: 'Overpass', $fs: 18px, $fw: 700, $lh: 24.4px, $c: #FF9900);
+        }
+
+        >span:nth-child(2) {
+            @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 20.2px, $c: #FFFCF3);
+
+            &.german {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 24px, $c: #FFFCF3);
+                text-align: center;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    form {
+        @include size($w: 400px, $h: 100%);
+
+        .input_container {
+
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 16px, $c: #FFFCF3);
+            }
+
+            input {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 20.2px, $c: #FFFCF3);
+                @include size($w: 100%, $h: 60px);
+            }
+        }
+
+        .textarea_container {
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 16px, $c: #FFFCF3);
+            }
+
+            textarea {
+                @include fontStyle($ff: 'Overpass', $fs: 20px, $fw: 400, $lh: 24.2px, $c: #FFFCF3);
+                min-width: 400px;
+                max-width: 400px;
+            }
+        }
+    }
+
+    .privacy_policy_text_container {
+
+        .privacy_policy_text {
+            @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 16px, $c: #FFFCF3);
+
+            a {
+                @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 16px, $c: #FF9900);
+                width: 100px;
+
+
+                &.german {
+                    width: 153px;
+                }
+            }
+        }
+    }
+
+    .error {
+        @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 16px, $c: #E61C40);
+    }
+
+    .valid_container {
+        height: 25px;
+        width: 24px;
+    }
+
+    .error_container {
+        height: 24px;
+        width: 24.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg_style {
+        min-height: 1080px;
+    }
+
+    .dialog_background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .success_message_dialog {
+        @include fontStyle($ff: 'Overpass', $fs: 24px, $fw: 400, $lh: 35px, $c: #000000);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFCF3;
+        padding: 50px 25px;
+        border-radius: 50px;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 50px;
+
+        >img {
+            position: relative;
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .bg_style {
+        min-height: 1000px;
+    }
+
+    .contact_content {
+        >span {
+            @include fontStyle($ff: 'Syne', $fs: 30px, $fw: 800, $lh: 30px, $c: #FFFCF3);
+            white-space: unset;
+            margin-bottom: 40px;
+        }
+    }
+
+    .form_content {
+
+        >span:nth-child(2) {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            &.german {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    form {
+        @include size($w: 300px, $h: 100%);
+
+        .input_container {
+
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 15px, $c: #FFFCF3);
+            }
+
+            input {
+                @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 19.2px, $c: #FFFCF3);
+            }
+        }
+
+        .textarea_container {
+            label {
+                @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 15px, $c: #FFFCF3);
+            }
+
+            textarea {
+                min-width: 300px;
+                max-width: 300px;
+            }
+        }
+    }
+
+    button {
+        @include size($w: 200px, $h: 60px);
+        @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 400, $lh: 20.6px, $c: #3b3b3b);
+        border: 2px solid #3b3b3b;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .enabled {
+
+        &:hover {
+            width: 260px;
+            @include fontStyle($ff: 'Overpass', $fs: 16px, $fw: 700, $lh: 20.6px, $c: #FFFCF3);
+        }
+    }
+
+    .error {
+        @include fontStyle($ff: 'Overpass', $fs: 15px, $fw: 400, $lh: 15px, $c: #E61C40);
+    }
+}

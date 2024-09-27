@@ -184,10 +184,11 @@
 
     .scroll_container {
         height: 190px;
-        width: 90px;
+        width: 150px;
 
         .arrow_container {
             height: 150px;
+            flex-direction: column;
 
             img {
                 width: 80px;
