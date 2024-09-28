@@ -2,6 +2,7 @@
 
 .bg_style {
     @include position($pos: relative, $top: auto, $left: auto, $bottom: 0px, $right: auto);
+    background-color: #FFFCF3;
     width: 100%;
     min-height: 1150px;
     max-height: 700px;
