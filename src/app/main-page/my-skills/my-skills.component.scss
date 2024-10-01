@@ -17,6 +17,7 @@
 .my_skills_container {
     @include dFlex($jc: center, $ai: end);
     height: 100%;
+    padding-top: 160px;
 }
 
 .my_skills {

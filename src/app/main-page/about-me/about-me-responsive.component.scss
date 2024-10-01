@@ -161,6 +161,7 @@
         flex-direction: column;
         align-items: center;
         gap: 100px;
+        padding-top: 120px;
     }
 
     .about_me_text_container {
@@ -216,6 +217,7 @@
 
         .arrow_images {
             @include position($pos: absolute, $top: auto, $left: auto, $bottom: 0, $right: 320px);
+            height: 50%;
 
             .arrow_short_start {
                 height: 220px;
