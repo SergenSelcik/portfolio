@@ -1,14 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { AboveTheFoldComponent } from '../../main-page/above-the-fold/above-the-fold.component';
-import { Router, RouterLink } from '@angular/router';
-import { MenuComponent } from '../../main-page/menu/menu.component';
+import { Router } from '@angular/router';
 import { MenuService } from '../../services/menu.service';
 import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, AboveTheFoldComponent, MenuComponent],
+  imports: [],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss',
     './header-responsive.component.scss',
